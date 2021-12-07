@@ -49,6 +49,14 @@ body {
 .container {
 	width: 60vw;
 	margin: 0 auto;
+
+
+	&_center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+	}
 }
 
 // A row of buttons that provides some padding
