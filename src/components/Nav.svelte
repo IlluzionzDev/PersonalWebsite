@@ -22,8 +22,11 @@
 	nav {
 		// Cover whole width
 		width: 100%;
+		
 
 		ul {
+			// Fixed nav height
+			height: 5vh;
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
@@ -32,10 +35,10 @@
 			padding: 0;
 
 			li {
+				margin: auto 0;
 				list-style: none;
 				font-size: 1.125rem;
 				position: relative;
-				padding: rem(30) 0;
 
 				// Branding on nav
 				&.brand {
