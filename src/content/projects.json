@@ -1,0 +1,16 @@
+{
+    "projects": [
+        {
+            "id": "01",
+            "name": "Custom Fishing",
+            "description": "Reinvent the fishing system in Minecraft. With all new custom rewards creates a unique fishing system for any server out there!",
+            "link": "https://www.spigotmc.org/resources/53634/"
+        },
+        {
+            "id": "02",
+            "name": "Custom Tab",
+            "description": "An all new way to display server information. Dynamic text animations in the tab provide an exciting way to display server information and keep players engaged.",
+            "link": "https://www.spigotmc.org/resources/78200/"
+		}
+    ]
+}

@@ -1,1 +1,1 @@
-In dev at https://bazaar-flipper.vercel.app/
+My personal website
