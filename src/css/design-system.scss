@@ -227,6 +227,7 @@ $shadow-blue: #8393a8;
 
 // Typography Styles plus base classes
 @mixin display-1 {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: 800;
 	font-size: rem(64);
@@ -234,6 +235,7 @@ $shadow-blue: #8393a8;
 	letter-spacing: 0.02em;
 }
 @mixin display-2 {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: 800;
 	font-size: rem(56);
@@ -241,24 +243,28 @@ $shadow-blue: #8393a8;
 	letter-spacing: 0.02em;
 }
 @mixin heading-1 {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: bold;
 	font-size: rem(48);
 	line-height: rem(58);
 }
 @mixin heading-2 {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: bold;
 	font-size: rem(36);
 	line-height: rem(44);
 }
 @mixin heading-3 {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: 600;
 	font-size: rem(24);
 	line-height: rem(29);
 }
 @mixin sub-heading-1 {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: 600;
 	font-size: rem(22);
@@ -300,24 +306,28 @@ $shadow-blue: #8393a8;
 	line-height: rem(26);
 }
 @mixin small-text {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: bold;
 	font-size: rem(14);
 	line-height: rem(24);
 }
 @mixin small-heading-1 {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: bold;
 	font-size: rem(18);
 	line-height: rem(24);
 }
 @mixin small-heading-2 {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: 500;
 	font-size: rem(18);
 	line-height: rem(24);
 }
 @mixin button-text {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: bold;
 	font-size: rem(14);
@@ -326,6 +336,7 @@ $shadow-blue: #8393a8;
 	text-transform: uppercase;
 }
 @mixin link-text {
+	font-family: $font-1 !important;
 	font-style: normal;
 	font-weight: bold;
 	font-size: rem(14);
@@ -447,6 +458,7 @@ a {
 	-webkit-font-smoothing: antialiased;
 	outline: none;
 	margin: 0;
+	font-family: $font-1;
 }
 
 *,
@@ -525,6 +537,7 @@ button {
 	border: none;
 	border-radius: 20px;
 	cursor: pointer;
+	font-family: $font-1;
 
 	transition: 200ms ease-in-out;
 

@@ -46,10 +46,7 @@
 		@include md {
 			text-align: center;
 			margin: rem(20) auto;
+			max-width: 80%;
 		}
-
-        @include sm {
-            max-width: 80%;
-        }
 	}
 </style>

@@ -12,8 +12,8 @@
 	<h1 class="sub-heading-1">{projectName}</h1>
 	<p class="body-3">{projectDescription}</p>
 	<div class="buttons">
-		<!-- <span class="material-icons primary-100">code</span> -->
-		<a href={projectLink} target="_blank"><button class="outline">View Project</button></a>
+		<span class="material-icons">code</span>
+		<a href={projectLink} target="_blank">view more -></a>
 	</div>
 </div>
 
@@ -46,17 +46,18 @@
 			width: 100%;
 
 			display: flex;
-			justify-content: flex-end;
+			justify-content: space-between;
 			align-items: center;
 
 			margin-top: rem(14);
-		}
 
-		button {
-			&.outline {
-				background: $primary-100;
+			// Links
+			a {
 				color: $white;
-				border: 2px solid $primary-100;
+
+				&:hover {
+					color: $primary-300
+				}
 			}
 		}
 	}

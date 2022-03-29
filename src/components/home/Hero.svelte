@@ -7,9 +7,9 @@
 			<h1 class="display-1">
 				<span class="text-gradient primary-gradient-100">on a journey</span>
 			</h1>
-			<p class="small-heading-2">with code | design | innovation</p>
-			<a href="/"><button>About</button></a>
-			<a href="/"><button class="outline">Projects</button></a>
+			<p class="small-heading-2">with code, design, innovation</p>
+			<a href="/about"><button>About</button></a>
+			<a href="/projects"><button class="outline">Projects</button></a>
 		</div>
 	</div>
 	<div class="background">
@@ -26,8 +26,8 @@
 		display: flex;
 		height: 95vh;
 
-        // Account for nav
-        padding-bottom: 10vh;
+		// Account for nav
+		padding-bottom: 10vh;
 	}
 
 	// Main hero content
@@ -35,13 +35,14 @@
 		display: flex;
 		justify-content: flex-start;
 		flex-direction: column;
-		align-items: left;
+		align-items: center;
 		width: 100%;
-
+		margin: auto auto;
 		text-align: center;
 
+		// Big feature text
 		h1 {
-			line-height: 4rem;
+			line-height: 4.5rem;
 
 			@include md {
 				font-size: rem(48);
@@ -49,12 +50,9 @@
 			}
 		}
 
-		.text {
-			margin: auto auto;
-		}
-
+		// Catch line
 		.small-heading-2 {
-			padding: rem(7) 0;
+			padding: rem(16) 0;
 		}
 	}
 
@@ -70,8 +68,9 @@
 
 		width: 50%;
 		height: 95%;
-        padding-left: 50%;
-        position: absolute;
+		padding-left: 50%;
+		padding-bottom: 10vh;
+		position: absolute;
 	}
 
 	// Spacing of hero buttons
@@ -104,8 +103,8 @@
 		background: $primary-100;
 		border-radius: 50%;
 		mix-blend-mode: multiply;
-		filter: blur(80px);
-		opacity: 18%;
+		filter: blur(100px);
+		opacity: 15%;
 		transition: 500ms ease-in-out;
 		animation-fill-mode: forwards;
 
