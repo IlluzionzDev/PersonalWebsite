@@ -26,7 +26,7 @@
 
 		ul {
 			// Fixed nav height
-			height: 5vh;
+			// height: 5vh;
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
@@ -39,6 +39,7 @@
 				list-style: none;
 				font-size: 1.125rem;
 				position: relative;
+				padding: 1.5rem 1rem;
 
 				// Branding on nav
 				&.brand {
