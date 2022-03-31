@@ -15,7 +15,8 @@
     />
     <div class="cards">
         {#each projects as project}
-            <ProjectCard projectNumber={project.id} projectName={project.name} projectDescription={project.description} projectLink={project.link} />
+            <ProjectCard projectNumber={project.id} projectName={project.name} projectDescription={project.description} projectLink={project.link} 
+            projectRepo={projects.repo}/>
         {/each}
     </div>
     <div class="links">

@@ -26,7 +26,6 @@
 
 		ul {
 			// Fixed nav height
-			// height: 5vh;
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;

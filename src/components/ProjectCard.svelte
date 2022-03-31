@@ -4,6 +4,7 @@
 	export let projectName = 'Undefined';
 	export let projectDescription = 'None';
 	export let projectLink = '#';
+	export let projectRepo = '#'
 </script>
 
 <div class="card">
@@ -12,7 +13,7 @@
 	<h1 class="sub-heading-1">{projectName}</h1>
 	<p class="body-3">{projectDescription}</p>
 	<div class="buttons">
-		<span class="material-icons">code</span>
+		<a href={projectRepo}><span class="material-icons">code</span></a>
 		<a href={projectLink} target="_blank">view more -></a>
 	</div>
 </div>
