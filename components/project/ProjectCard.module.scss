@@ -1,0 +1,21 @@
+.project {
+    background-color: $primary-200;
+    color: $white;
+
+    border-radius: 10px;
+    padding: 1rem;
+
+    width: 100%;
+    min-height: rem(200);
+
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+        flex: 1;
+    }
+
+    .right {
+        flex: 1;
+    }
+}
