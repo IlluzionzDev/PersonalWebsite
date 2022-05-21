@@ -11,6 +11,7 @@ const About = () => (
                 slogan="A little bit of backstory..."
                 title="About Me"
                 subtitle="Who am I?"
+                description=''
             />
             <div className={styles.text}>
                 <p className="body-1">
