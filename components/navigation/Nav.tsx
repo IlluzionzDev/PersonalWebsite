@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <header className={` ${styles.header} container`}>
+    <header className={`${styles.header} container`}>
       <nav>
         <ul>
           <li className={styles.brand}>
@@ -12,25 +12,25 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            <Link href="/about">
-              <a className="link">About</a>
+            <Link href="#">
+              <a className="link">Blog Coming Soon!</a>
             </Link>
           </li>
-          <li>
-            <Link href="/projects">
-              <a className="link">Projects</a>
+          {/* <li>
+            <Link href="#projects">
+              <a className="link">Instagram</a>
             </Link>
-          </li>
+          </li> */}
           {/* <li>
             <Link href="/blog">
               <a className="link">Blog</a>
             </Link>
           </li> */}
-          <li>
-            <Link href="/contact">
+          {/* <li>
+            <Link href="#contact">
               <a className="link">Contact</a>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

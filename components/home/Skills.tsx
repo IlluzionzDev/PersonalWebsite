@@ -15,8 +15,8 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => (
       description="I love to learn and utilise popular and useful technologies. Take a look at some of the tools I use."
     />
     <div className={`${styles.skills}`}>
-      {skills.map((skill) => {
-        return <button>{skill}</button>;
+      {skills.map((skill, id) => {
+        return <button key={id}>{skill}</button>;
       })}
     </div>
   </PaddedSection>

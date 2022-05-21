@@ -247,7 +247,6 @@ p {
 
 a {
     @include link-text;
-
 }
 
 // Hover animation for links
@@ -351,6 +350,7 @@ body {
 
     // Default font
     font-family: $font-1;
+    font-display: swap;
 }
 
 // Main content container

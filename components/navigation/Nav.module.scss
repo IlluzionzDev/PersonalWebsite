@@ -43,6 +43,10 @@
     
                 a {
                     color: $onyx;
+
+                    &:hover {
+                        color: gray;
+                    }
                 }
     
                 // Make first element on left (logo)
