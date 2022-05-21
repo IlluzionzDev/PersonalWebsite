@@ -11,7 +11,8 @@
           "name": "CustomTab",
           "description": "CustomTab is a Minecraft Plugin that re-invents information display in a custom way. It allows the usually boring player tab list to be customized with unique layouts, animating text elements, and even custom images!",
           "skills": ["Kotlin", "SpigotMC"],
-          "link": "https://www.spigotmc.org/resources/78200/"
+          "link": "https://www.spigotmc.org/resources/78200/",
+          "source": ""
         }
     ]
 }
