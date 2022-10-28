@@ -1,24 +1,12 @@
 import About from "@components/home/About";
 import Projects from "@components/home/Projects";
 import Skills from "@components/home/Skills";
-import Footer from "components/navigation/Footer";
-import Nav from "components/navigation/Nav";
+import Footer from "@components/navigation/Footer";
+import Nav from "@components/navigation/Nav";
 import type { NextPage } from "next";
-import Hero from "../components/home/Hero";
+import Hero from "@components/home/Hero";
 import Head from 'next/head';
-
-let skills = [
-  "NextJS",
-  "Java",
-  "Kotlin",
-  "SQL",
-  "MongoDB",
-  "JavaScript",
-  "TypeScript",
-  "Python",
-  "Linux",
-  "SpigotMC",
-];
+import skills from '@content/skills'
 
 const Home: NextPage = () => {
   return (
