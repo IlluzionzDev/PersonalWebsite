@@ -6,7 +6,7 @@ import Nav from "@components/navigation/Nav";
 import type { NextPage } from "next";
 import Hero from "@components/home/Hero";
 import Head from 'next/head';
-import skills from '@content/skills'
+import skills from '@content/skills';
 
 const Home: NextPage = () => {
   return (

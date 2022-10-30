@@ -20,11 +20,10 @@
 
     // Big feature text
     h1 {
-        line-height: 4.5rem;
+        line-height: 1;
 
-        @include md {
-            font-size: rem(48);
-            line-height: 3rem;
+        @include sm {
+            font-size: 2.6rem;
         }
     }
 
@@ -54,12 +53,13 @@
 // Spacing of hero buttons
 .button {
     margin-top: rem(24);
-    margin-right: rem(24);
+    // margin-right: rem(24);
 }
 
 .button__row {
     display: flex;
     flex-direction: row;
+    gap: rem(24);
 }
 
 // Animation for blob shapes
