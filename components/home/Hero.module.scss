@@ -13,18 +13,25 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    align-items: left;
+    width: 50%;
     margin: auto auto;
-    text-align: center;
+    text-align: left;
 
     // Big feature text
     h1 {
+        font-size: 6.8rem;
         line-height: 1;
+        // text-transform: uppercase;
 
-        @include sm {
-            font-size: 2.6rem;
+        @include md {
+            font-size: 5rem;
         }
+    }
+
+    @include md {
+        align-items: center;
+        text-align: center;
     }
 
     // Catch line
@@ -53,7 +60,6 @@
 // Spacing of hero buttons
 .button {
     margin-top: rem(24);
-    // margin-right: rem(24);
 }
 
 .button__row {

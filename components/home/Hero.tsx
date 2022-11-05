@@ -1,5 +1,6 @@
 import styles from './Hero.module.scss'
 import Link from 'next/link'
+import Typewriter from 'typewriter-effect'
 
 const Hero = () => (
     <div className={styles.hero}>
@@ -10,14 +11,22 @@ const Hero = () => (
                 >
                     Hi, I&apos;m Jamin Stratford
                 </p>
-                <h1 className="display-1">Let me take you</h1>
                 <h1 className="display-1">
+                    <Typewriter
+                        options={{
+                            strings: ['Software Engineer', 'Innovator', 'Creative Mind'],
+                            autoStart: true,
+                            loop: true,
+                        }}
+                    />
+                </h1>
+                {/* <h1 className="display-1">
                     <span className="text-gradient primary-gradient-100">
                         on a journey
                     </span>
-                </h1>
+                </h1> */}
                 <p className={`small-heading-2 ${styles.smallHeading}`}>
-                    with code, design, innovation
+                    Innovative and creative indivudal with a love for learning
                 </p>
             </div>
             <div className={styles.button__row}>

@@ -46,6 +46,7 @@ $screen-xl-min: 80em;
 // Fonts
 $font-1: 'Inter';
 $font-2: 'Mulish';
+$font-3: 'Source Sans Pro';
 
 // Colours
 $white: #ffffff;
@@ -103,7 +104,7 @@ $shadow-blue: #8393a8;
 
 // Typography Styles plus base classes
 @mixin display-1 {
-    font-family: $font-1 !important;
+    font-family: $font-3 !important;
     font-style: normal;
     font-weight: 800;
     font-size: rem(64);
@@ -112,7 +113,7 @@ $shadow-blue: #8393a8;
 }
 
 @mixin display-2 {
-    font-family: $font-1 !important;
+    font-family: $font-3 !important;
     font-style: normal;
     font-weight: 800;
     font-size: rem(56);
