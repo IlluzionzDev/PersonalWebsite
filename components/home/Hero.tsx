@@ -20,11 +20,6 @@ const Hero = () => (
                         }}
                     />
                 </h1>
-                {/* <h1 className="display-1">
-                    <span className="text-gradient primary-gradient-100">
-                        on a journey
-                    </span>
-                </h1> */}
                 <p className={`small-heading-2 ${styles.smallHeading}`}>
                     Innovative and creative indivudal with a love for learning
                 </p>
