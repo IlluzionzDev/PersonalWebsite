@@ -1,18 +1,11 @@
 {
     "projects": [
         {
-            "name": "CustomFishing",
-            "description": "CustomFishing is a Minecraft Plugin that re-invents the fishing experience. With all new loot accompanied with custom effects and sounds, it leads to an all new experience. This was alot of fun implementing an envisioned game design concept and seeing it come to life.",
-            "skills": [ "Kotlin", "SpigotMC" ],
-            "link": "https://www.spigotmc.org/resources/53634/",
-            "source": "https://github.com/IlluzionzDev/CustomFishing"
-        },
-        {
-          "name": "CustomTab",
-          "description": "CustomTab is a Minecraft Plugin that re-invents information display in a custom way. It allows the usually boring player tab list to be customized with unique layouts, animating text elements, and even custom images!",
-          "skills": ["Kotlin", "SpigotMC"],
-          "link": "https://www.spigotmc.org/resources/78200/",
-          "source": "https://github.com/IlluzionzDev/CustomTab"
+            "name": "Quizz",
+            "description": "Quizz is a real-time quizzing application. It works like Kahoot where you can host numerous players and they compete for the highest score by answering right the fastest. Features a full quiz editor, and an easy way to join quizzes.",
+            "skills": [ "ExpressJS", "NextJS", "WebSockets" ],
+            "link": "https://quizz.jaminstratford.com",
+            "source": "https://github.com/IlluzionzDev/Quizz"
         }
     ]
 }

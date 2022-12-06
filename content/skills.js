@@ -7,11 +7,18 @@ const skills = [
     'Python',
     'SQL',
     'MongoDB',
+    'Redis',
+    'WebSockets',
     'NodeJS',
+    'ReactJS',
+    'Redux',
     'ExpressJS',
+    'REST',
     'NextJS',
     'CI/CD',
-    'Linux'
+    'Linux',
+    'Docker',
+    'AWS'
 ]
 
 export default skills

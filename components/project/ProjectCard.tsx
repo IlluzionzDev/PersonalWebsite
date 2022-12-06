@@ -30,22 +30,23 @@ const ProjectCard: React.FC<ProjectCard> = ({ index, project }) => (
         </div>
         <p>{project.description}</p>
         <div className={styles.links}>
-            <Link href={project.link}>
-                <a>
-                    <button className="small-text white">View Project</button>
-                </a>
-            </Link>
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <button className="small-text white">View Project</button>
+            </a>
+
             {project.source && (
-                <Link href={project.source}>
-                    <a>
-                        <motion.span
-                            whileHover={{ translateY: -3 }}
-                            className="material-icons primary-300"
-                        >
-                            code
-                        </motion.span>
-                    </a>
-                </Link>
+                <a
+                    href={project.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <motion.span
+                        whileHover={{ translateY: -3 }}
+                        className="material-icons primary-300"
+                    >
+                        code
+                    </motion.span>
+                </a>
             )}
         </div>
     </motion.div>
