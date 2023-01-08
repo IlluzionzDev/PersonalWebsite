@@ -47,6 +47,11 @@
     box-sizing: border-box;
 }
 
+// Anchor text reset
+a {
+    color: black;
+}
+
 // Styling of text selection
 ::-moz-selection,
 ::selection {

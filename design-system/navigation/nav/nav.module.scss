@@ -1,0 +1,28 @@
+.nav {
+    width: 100%;
+    padding: $spacing-7 0;
+
+    // List span
+    &__list {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+.logo {
+    justify-content: flex-start;
+}
+
+.links {
+    margin-left: auto;
+
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: $spacing-4;
+    }
+}

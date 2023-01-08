@@ -1,0 +1,9 @@
+.logo {
+    @include text-gradient;
+
+    background-image: linear-gradient(
+        to right,
+        var(--tertiary700),
+        var(--secondary700)
+    );
+}

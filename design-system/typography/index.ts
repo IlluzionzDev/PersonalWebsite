@@ -1,3 +1,3 @@
-export { Heading } from './heading';
-export { Body } from './body';
-export { Label } from './label';
+export { Heading } from './heading/heading';
+export { Body } from './body/body';
+export { Label } from './label/label';

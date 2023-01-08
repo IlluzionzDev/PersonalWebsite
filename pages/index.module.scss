@@ -1,0 +1,27 @@
+.gradient__bg {
+    background: linear-gradient(
+        to right,
+        rgba(var(--tertiary100RGB), 0.25),
+        rgba(var(--secondary100RGB), 0.25)
+    );
+}
+
+.hero {
+    &__splash {
+        margin-left: auto;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    &__highlight {
+        @include text-gradient;
+
+        background-image: linear-gradient(
+            to right,
+            var(--tertiary500),
+            var(--secondary700)
+        );
+    }
+}

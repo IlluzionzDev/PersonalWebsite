@@ -1,2 +1,2 @@
-export { FullSection } from './full-section';
-export { CenterSection } from './center-section';
+export { FullSection } from './full/full-section';
+export { CenterSection } from './center/center-section';
