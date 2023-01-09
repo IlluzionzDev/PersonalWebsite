@@ -3,7 +3,21 @@
         {
             "name": "Quizz",
             "description": "Quizz is a real-time quizzing application. It works like Kahoot where you can host numerous players and they compete for the highest score by answering right the fastest. Features a full quiz editor, and an easy way to join quizzes.",
-            "skills": [ "ExpressJS", "NextJS", "WebSockets" ],
+            "skills": ["ExpressJS", "NextJS", "WebSockets"],
+            "link": "https://quizz.jaminstratford.com",
+            "source": "https://github.com/IlluzionzDev/Quizz"
+        },
+        {
+            "name": "Quizz",
+            "description": "Quizz is a real-time quizzing application. It works like Kahoot where you can host numerous players and they compete for the highest score by answering right the fastest. Features a full quiz editor, and an easy way to join quizzes.",
+            "skills": ["ExpressJS", "NextJS", "WebSockets"],
+            "link": "https://quizz.jaminstratford.com",
+            "source": "https://github.com/IlluzionzDev/Quizz"
+        },
+        {
+            "name": "Quizz",
+            "description": "Quizz is a real-time quizzing application. It works like Kahoot where you can host numerous players and or, and an easy way to join quizzes.",
+            "skills": ["ExpressJS", "NextJS", "WebSockets"],
             "link": "https://quizz.jaminstratford.com",
             "source": "https://github.com/IlluzionzDev/Quizz"
         }

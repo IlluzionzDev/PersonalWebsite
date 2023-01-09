@@ -1,5 +1,5 @@
-import { Label } from "@design-system/typography";
-import { useField } from "../field-context";
+import { Label } from '@design-system/typography';
+import { useField } from '../field-context';
 
 /**
  * Displays field error
@@ -11,6 +11,8 @@ export const FieldError: React.FC = () => {
     if (!error || typeof error !== 'string') return null;
 
     return (
-        <Label variant="sm" color="error500" id={`${id}-error`}>{error}</Label>
+        <Label variant="sm" color="error500" id={`${id}-error`}>
+            {error}
+        </Label>
     );
 };

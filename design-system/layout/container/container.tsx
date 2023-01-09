@@ -6,5 +6,5 @@ export const Container: React.FC = ({ children }) => {
 
 // Container that wraps content tightly
 export const TightContainer: React.FC = ({ children }) => {
-    return <div className={styles.containerTight}>{children}</div>
-}
+    return <div className={styles.containerTight}>{children}</div>;
+};

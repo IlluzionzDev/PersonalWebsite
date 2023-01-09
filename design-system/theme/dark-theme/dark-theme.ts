@@ -1,6 +1,6 @@
 type colorsType = {
     color: Record<string, string>;
-}
+};
 
 export const colors: colorsType = {
     color: {
@@ -85,6 +85,6 @@ export const colors: colorsType = {
         error600: '#b72d36',
         error700: '#892228',
         error800: '#5c161b',
-        error900: '#2e0b0d'
-    }
+        error900: '#2e0b0d',
+    },
 };

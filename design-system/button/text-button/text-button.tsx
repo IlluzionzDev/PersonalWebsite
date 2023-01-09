@@ -14,15 +14,32 @@ type ButtonProps = {
     fullWidth?: boolean;
 } & HTMLMotionProps<'button'>;
 
-export const TextButton: React.FC<ButtonProps> = ({ children, color, startIcon, endIcon, disabled, fullWidth, ...rest }) => {
+export const TextButton: React.FC<ButtonProps> = ({
+    children,
+    color,
+    startIcon,
+    endIcon,
+    disabled,
+    fullWidth,
+    ...rest
+}) => {
     const { theme, toggleTheme } = useTheme();
 
     const colors = {
-        color: color ? 'var(--' + color + ')' : undefined
+        color: color ? 'var(--' + color + ')' : undefined,
     };
 
     return (
-        <motion.button style={colors} className={classNames(styles.baseButton, fullWidth ? styles.fullWidth : '')} disabled={disabled} aria-disabled={disabled} {...rest}>
+        <motion.button
+            style={colors}
+            className={classNames(
+                styles.baseButton,
+                fullWidth ? styles.fullWidth : ''
+            )}
+            disabled={disabled}
+            aria-disabled={disabled}
+            {...rest}
+        >
             {startIcon && <Box className={styles.iconWrapper}>{startIcon}</Box>}
             <Label variant="button">{children}</Label>
             {endIcon && <Box className={styles.iconWrapper}>{endIcon}</Box>}

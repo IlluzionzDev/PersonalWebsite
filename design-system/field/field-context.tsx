@@ -7,5 +7,9 @@ type FieldContextType = {
 };
 
 // Expose field variables
-export const FieldContext = createContext<FieldContextType>({ error: undefined, name: '', id: '' });
+export const FieldContext = createContext<FieldContextType>({
+    error: undefined,
+    name: '',
+    id: '',
+});
 export const useField = () => useContext(FieldContext);

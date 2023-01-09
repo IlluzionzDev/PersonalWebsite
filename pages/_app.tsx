@@ -1,17 +1,17 @@
 // Import SCSS utils
-import '@design-system/design-system.scss'
-import type { AppProps } from 'next/app'
+import '@design-system/design-system.scss';
+import type { AppProps } from 'next/app';
 
 // Font stlying
-import '@fontsource/poppins/700.css'
-import '@fontsource/poppins/600.css'
-import '@fontsource/poppins/500.css'
-import '@fontsource/poppins/400.css'
-import '@fontsource/inter/700.css'
-import '@fontsource/inter/400.css'
-import { ThemeProvider } from '@design-system/theme'
-import Head from 'next/head'
-import { useEffect } from 'react'
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/inter/400.css';
+import { ThemeProvider } from '@design-system/theme';
+import Head from 'next/head';
+import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
     useEffect(() => {
@@ -20,13 +20,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             document.documentElement.style.setProperty(
                 '--vh',
                 window.innerHeight + 'px'
-            )
-        }
+            );
+        };
 
         // Update viewport on resize
-        window.addEventListener('resize', setHeight)
-        setHeight()
-    }, [])
+        window.addEventListener('resize', setHeight);
+        setHeight();
+    }, []);
 
     return (
         <ThemeProvider>
@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Head>
             <Component {...pageProps} />
         </ThemeProvider>
-    )
+    );
 }
 
-export default MyApp
+export default MyApp;

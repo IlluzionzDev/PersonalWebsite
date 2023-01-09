@@ -4,6 +4,7 @@ import { Box, BoxProps } from '@design-system/layout/box';
 export type FlexTypes = {
     alignItems?: string;
     justifyContent?: string;
+    justifySelf?: string;
     inline?: boolean;
 
     direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
@@ -20,6 +21,7 @@ export const Flex: React.FC<FlexTypes> = ({
     children,
     alignItems,
     justifyContent,
+    justifySelf,
     inline = false,
 
     direction,
@@ -35,12 +37,13 @@ export const Flex: React.FC<FlexTypes> = ({
             inlineStyle={{
                 alignItems: alignItems,
                 justifyContent: justifyContent,
+                justifySelf: justifySelf,
                 display: inline ? 'inline-flex' : 'flex',
 
                 flexDirection: direction,
                 flexShrink: shrink,
                 flexWrap: wrap,
-                gap: gap ? theme.spaces[gap] : undefined
+                gap: gap ? theme.spaces[gap] : undefined,
             }}
             {...rest}
         >

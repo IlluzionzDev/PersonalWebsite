@@ -1,11 +1,11 @@
-import { Portal } from '@design-system/layout/portal'
-import { DismissableLayer } from '../dismissable-layer'
-import { ModalContext } from '../context/modal-context'
-import styles from './modal-layout.module.scss'
+import { Portal } from '@design-system/layout/portal';
+import { DismissableLayer } from '../dismissable-layer';
+import { ModalContext } from '../context/modal-context';
+import styles from './modal-layout.module.scss';
 
 type ModalLayoutProps = {
-    onClose: () => void
-} & React.HTMLAttributes<HTMLDivElement>
+    onClose: () => void;
+} & React.HTMLAttributes<HTMLDivElement>;
 
 export const ModalLayout: React.FC<ModalLayoutProps> = ({
     children,
@@ -29,5 +29,5 @@ export const ModalLayout: React.FC<ModalLayoutProps> = ({
                 </div>
             </ModalContext.Provider>
         </Portal>
-    )
-}
+    );
+};

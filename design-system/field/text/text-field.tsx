@@ -1,23 +1,23 @@
-import { Flex } from '@design-system/layout/flex'
-import classNames from 'classnames'
-import { HTMLMotionProps } from 'framer-motion'
-import { CSSProperties } from 'react'
-import { Field } from '../field/field'
-import { FieldError } from '../error/field-error'
-import { FieldInput } from '../input/field-input'
-import { FieldLabel } from '../label/field-label'
-import styles from './text-field.module.scss'
+import { Flex } from '@design-system/layout/flex';
+import classNames from 'classnames';
+import { HTMLMotionProps } from 'framer-motion';
+import { CSSProperties } from 'react';
+import { Field } from '../field/field';
+import { FieldError } from '../error/field-error';
+import { FieldInput } from '../input/field-input';
+import { FieldLabel } from '../label/field-label';
+import styles from './text-field.module.scss';
 
 type TextFieldProps = {
-    className?: CSSProperties | string
-    disabled?: boolean
-    value: string
-    name: string
-    id: string
-    label?: string
-    error?: string
-    motion?: HTMLMotionProps<'div'>
-} & React.InputHTMLAttributes<HTMLInputElement>
+    className?: CSSProperties | string;
+    disabled?: boolean;
+    value: string;
+    name: string;
+    id: string;
+    label?: string;
+    error?: string;
+    motion?: HTMLMotionProps<'div'>;
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
 /**
  * Master component for a field of text
@@ -47,5 +47,5 @@ export const TextField: React.FC<TextFieldProps> = ({
                 <FieldError />
             </Flex>
         </Field>
-    )
-}
+    );
+};

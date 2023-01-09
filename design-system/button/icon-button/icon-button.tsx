@@ -10,11 +10,20 @@ type ButtonProps = {
     disabled?: boolean;
 } & React.HTMLAttributes<HTMLButtonElement>;
 
-export const IconButton: React.FC<ButtonProps> = ({ icon, disabled, ...rest }) => {
+export const IconButton: React.FC<ButtonProps> = ({
+    icon,
+    disabled,
+    ...rest
+}) => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <button className={classNames(styles.baseButton)} disabled={disabled} aria-disabled={disabled} {...rest}>
+        <button
+            className={classNames(styles.baseButton)}
+            disabled={disabled}
+            aria-disabled={disabled}
+            {...rest}
+        >
             <Box className={styles.iconWrapper}>{icon}</Box>
         </button>
     );

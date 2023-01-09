@@ -6,15 +6,15 @@ import { darkTheme } from './dark-theme';
 import { lightTheme } from './light-theme';
 
 const defaultTheme = {
-	color: 'string'
-}
+    color: 'string',
+};
 
 export type Theme = typeof defaultTheme;
 
 // Theme object
 export const ThemeContext = createContext({
     isDarkTheme: false,
-    toggleTheme: () => {}
+    toggleTheme: () => {},
 });
 
 export const ThemeProvider: React.FC = ({ children }) => {
@@ -24,23 +24,32 @@ export const ThemeProvider: React.FC = ({ children }) => {
         setIsDarkTheme((prev) => !prev);
     };
 
-	// Update body theme class
-	useEffect(() => {
-		 if (isDarkTheme) {
-             document.body.classList.add('darkTheme');
-         } else {
-             document.body.classList.remove('darkTheme');
-         }
-	}, [isDarkTheme]);
+    // Update body theme class
+    useEffect(() => {
+        if (isDarkTheme) {
+            document.body.classList.add('darkTheme');
+        } else {
+            document.body.classList.remove('darkTheme');
+        }
+    }, [isDarkTheme]);
 
-    return <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>{children}</ThemeContext.Provider>;
+    return (
+        <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
+            {children}
+        </ThemeContext.Provider>
+    );
 };
 
 export const ThemeSwitcher = () => {
     const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
 
-    return <IconButton onClick={toggleTheme} icon={(isDarkTheme ? <FaSun /> : <FaMoon />)}/>
-}
+    return (
+        <IconButton
+            onClick={toggleTheme}
+            icon={isDarkTheme ? <FaSun /> : <FaMoon />}
+        />
+    );
+};
 
 // Use theme constants
 export function useTheme() {

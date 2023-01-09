@@ -12,13 +12,33 @@ type CheckboxInputProps = {
 /**
  * Base check box styling. Exposes control variables
  */
-export const CheckboxInput: React.FC<CheckboxInputProps> = ({ checked, disabled, onChange, ...rest }) => {
+export const CheckboxInput: React.FC<CheckboxInputProps> = ({
+    checked,
+    disabled,
+    onChange,
+    ...rest
+}) => {
     const checkBox = useRef<HTMLInputElement>(null);
 
     return (
         <Flex>
-            {checked && <FaCheck className={styles.check} aria-disabled={disabled} onClick={() => checkBox?.current?.click()} />}
-            <input type="checkbox" ref={checkBox} className={styles.checkbox} name="test" checked={checked} onChange={onChange} disabled={disabled} {...rest} />
+            {checked && (
+                <FaCheck
+                    className={styles.check}
+                    aria-disabled={disabled}
+                    onClick={() => checkBox?.current?.click()}
+                />
+            )}
+            <input
+                type="checkbox"
+                ref={checkBox}
+                className={styles.checkbox}
+                name="test"
+                checked={checked}
+                onChange={onChange}
+                disabled={disabled}
+                {...rest}
+            />
         </Flex>
     );
 };

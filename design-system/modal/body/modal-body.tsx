@@ -7,4 +7,4 @@ export const ModalBody: React.FC = ({ children }) => {
             {children}
         </Box>
     );
-}
+};

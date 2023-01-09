@@ -18,5 +18,9 @@ export const commonTheme = {
         128 / 16 + 'rem',
         256 / 16 + 'rem',
     ],
-    borderRadius: '4px',
-}
+    borderRadius: {
+        sm: '4px',
+        md: '8px',
+        lg: '12px',
+    },
+};

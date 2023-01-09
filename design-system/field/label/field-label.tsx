@@ -1,10 +1,12 @@
-import { Label } from "@design-system/typography";
+import { Label } from '@design-system/typography';
 
 /**
  * Label describing a field
  */
 export const FieldLabel: React.FC = ({ children, ...rest }) => {
     return (
-        <Label variant="md" color="black">{children}</Label>
+        <Label variant="md" color="black">
+            {children}
+        </Label>
     );
 };

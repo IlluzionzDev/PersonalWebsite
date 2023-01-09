@@ -13,7 +13,13 @@ type TextInputProps = {
 /**
  * The raw styled text input
  */
-export const TextInput: React.FC<TextInputProps> = ({ className, value, hasError, disabled, ...rest }) => {
+export const TextInput: React.FC<TextInputProps> = ({
+    className,
+    value,
+    hasError,
+    disabled,
+    ...rest
+}) => {
     const { id, name, error } = useField();
 
     let ariaDesc;
@@ -23,14 +29,19 @@ export const TextInput: React.FC<TextInputProps> = ({ className, value, hasError
     }
 
     return (
-        <input 
-        type="text" 
-        name={name} 
-        className={classNames(styles.input, (hasError ? styles.error : ''), className)} 
-        disabled={disabled} 
-        aria-disabled={disabled}
-        arai-describedby={ariaDesc}
-        value={value}
-        {...rest}/>
+        <input
+            type="text"
+            name={name}
+            className={classNames(
+                styles.input,
+                hasError ? styles.error : '',
+                className
+            )}
+            disabled={disabled}
+            aria-disabled={disabled}
+            arai-describedby={ariaDesc}
+            value={value}
+            {...rest}
+        />
     );
 };

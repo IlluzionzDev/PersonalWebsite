@@ -9,10 +9,21 @@ export const ModalHeader: React.FC = ({ children }) => {
     const { onClose } = useModal();
 
     return (
-        <Box className={styles.modalHeader} paddingTop={4} paddingBottom={4} paddingLeft={5} paddingRight={5} background="gray100">
-            <Flex direction="row" alignItems="center" justifyContent="space-between">
+        <Box
+            className={styles.modalHeader}
+            paddingTop={4}
+            paddingBottom={4}
+            paddingLeft={5}
+            paddingRight={5}
+            background="gray100"
+        >
+            <Flex
+                direction="row"
+                alignItems="center"
+                justifyContent="space-between"
+            >
                 {children}
-                <IconButton icon={<FaTimes />} onClick={onClose}/>
+                <IconButton icon={<FaTimes />} onClick={onClose} />
             </Flex>
         </Box>
     );

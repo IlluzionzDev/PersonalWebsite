@@ -1,17 +1,23 @@
 /* eslint-disable @next/next/link-passhref */
-import styles from './index.module.scss'
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { CenterSection, FullSection } from '@design-system/layout/section'
-import { Container } from '@design-system/layout/container'
-import { Heading, Label } from '@design-system/typography'
-import { Nav } from '@design-system/navigation'
-import Link from 'next/link'
-import { Box } from '@design-system/layout/box'
-import { Flex } from '@design-system/layout/flex'
-import { TextButton } from '@design-system/button'
-import { FaArrowRight, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { MainNav } from '@components/navigation/main-nav'
+import styles from './index.module.scss';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { CenterSection, FullSection } from '@design-system/layout/section';
+import { Container } from '@design-system/layout/container';
+import { Heading, Label } from '@design-system/typography';
+import Link from 'next/link';
+import { Box } from '@design-system/layout/box';
+import { Flex } from '@design-system/layout/flex';
+import { TextButton } from '@design-system/button';
+import {
+    FaArrowRight,
+    FaGithub,
+    FaInstagram,
+    FaLinkedin,
+} from 'react-icons/fa';
+import { MainNav } from '@components/navigation';
+import projects from '@content/projects.json';
+import ProjectCard from '@components/project/project-card';
 
 const Home: NextPage = () => {
     return (
@@ -25,9 +31,7 @@ const Home: NextPage = () => {
                 <link rel="canonical" href="https://jaminstratford.com" />
             </Head>
             <FullSection className={styles.gradient__bg}>
-                <Container>
-                    <MainNav />
-                </Container>
+                <MainNav />
                 <CenterSection>
                     <Container>
                         <Flex
@@ -53,6 +57,7 @@ const Home: NextPage = () => {
                                     <Link
                                         href="https://github.com/IlluzionzDev"
                                         target="_blank"
+                                        aria-label="GitHub"
                                     >
                                         <FaGithub />
                                     </Link>
@@ -72,7 +77,9 @@ const Home: NextPage = () => {
                                     </Link>
 
                                     <Link href="/about">
-                                        <TextButton endIcon={<FaArrowRight />}>
+                                        <TextButton
+                                            endIcon={<FaArrowRight size={16} />}
+                                        >
                                             Find Out More
                                         </TextButton>
                                     </Link>
@@ -98,10 +105,21 @@ const Home: NextPage = () => {
                         Take a look at some of my favourite projects I&apos;ve
                         created
                     </Label>
+                    <Flex direction="row" marginTop={10} gap={7}>
+                        {projects.projects.map((project, index) => {
+                            return (
+                                <ProjectCard
+                                    key={index}
+                                    index={index}
+                                    project={project}
+                                />
+                            );
+                        })}
+                    </Flex>
                 </Box>
             </Container>
         </>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;

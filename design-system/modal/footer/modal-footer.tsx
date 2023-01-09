@@ -8,10 +8,24 @@ type ModalFooterType = {
     endActions: ReactNode;
 };
 
-export const ModalFooter: React.FC<ModalFooterType> = ({ startActions, endActions }) => {
+export const ModalFooter: React.FC<ModalFooterType> = ({
+    startActions,
+    endActions,
+}) => {
     return (
-        <Box className={styles.modalFooter} paddingTop={4} paddingBottom={4} paddingLeft={5} paddingRight={5} background="gray100">
-            <Flex direction="row" alignItems="center"  justifyContent="space-between">
+        <Box
+            className={styles.modalFooter}
+            paddingTop={4}
+            paddingBottom={4}
+            paddingLeft={5}
+            paddingRight={5}
+            background="gray100"
+        >
+            <Flex
+                direction="row"
+                alignItems="center"
+                justifyContent="space-between"
+            >
                 <Flex direction="row" gap={1}>
                     {startActions}
                 </Flex>

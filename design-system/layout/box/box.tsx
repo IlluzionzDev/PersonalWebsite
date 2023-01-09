@@ -9,7 +9,7 @@ export type BoxProps = {
     color?: string;
     borderColor?: string;
 
-    hasRadius?: boolean;
+    radius?: 'sm' | 'md' | 'lg';
 
     padding?: number;
     paddingBottom?: number;
@@ -40,7 +40,7 @@ export const Box: React.FC<BoxProps> = ({
     color,
     borderColor,
 
-    hasRadius,
+    radius,
 
     padding,
     paddingBottom,
@@ -65,28 +65,64 @@ export const Box: React.FC<BoxProps> = ({
         <motion.div
             style={{
                 ...inlineStyle,
-                backgroundColor: background ? 'var(--' + background + ')' : undefined,
+                backgroundColor: background
+                    ? 'var(--' + background + ')'
+                    : undefined,
                 color: color ? 'var(--' + color + ')' : undefined,
-                borderColor: borderColor ? 'var(--' + borderColor + ')' : undefined,
+                borderColor: borderColor
+                    ? 'var(--' + borderColor + ')'
+                    : undefined,
 
-                borderRadius: hasRadius ? theme.borderRadius : undefined,
+                borderRadius: radius ? theme.borderRadius[radius] : undefined,
 
                 // Set all values with master padding
-                paddingBottom: paddingBottom ? theme.spaces[paddingBottom] : padding ? theme.spaces[padding] : undefined,
-                paddingLeft: paddingLeft ? theme.spaces[paddingLeft] : padding ? theme.spaces[padding] : undefined,
-                paddingTop: paddingTop ? theme.spaces[paddingTop] : padding ? theme.spaces[padding] : undefined,
-                paddingRight: paddingRight ? theme.spaces[paddingRight] : padding ? theme.spaces[padding] : undefined,
+                paddingBottom: paddingBottom
+                    ? theme.spaces[paddingBottom]
+                    : padding
+                    ? theme.spaces[padding]
+                    : undefined,
+                paddingLeft: paddingLeft
+                    ? theme.spaces[paddingLeft]
+                    : padding
+                    ? theme.spaces[padding]
+                    : undefined,
+                paddingTop: paddingTop
+                    ? theme.spaces[paddingTop]
+                    : padding
+                    ? theme.spaces[padding]
+                    : undefined,
+                paddingRight: paddingRight
+                    ? theme.spaces[paddingRight]
+                    : padding
+                    ? theme.spaces[padding]
+                    : undefined,
 
                 // Set all values with master margin
-                marginBottom: marginBottom ? theme.spaces[marginBottom] : margin ? theme.spaces[margin] : undefined,
-                marginLeft: marginLeft ? theme.spaces[marginLeft] : margin ? theme.spaces[margin] : undefined,
-                marginTop: marginTop ? theme.spaces[marginTop] : margin ? theme.spaces[margin] : undefined,
-                marginRight: marginRight ? theme.spaces[marginRight] : margin ? theme.spaces[margin] : undefined,
+                marginBottom: marginBottom
+                    ? theme.spaces[marginBottom]
+                    : margin
+                    ? theme.spaces[margin]
+                    : undefined,
+                marginLeft: marginLeft
+                    ? theme.spaces[marginLeft]
+                    : margin
+                    ? theme.spaces[margin]
+                    : undefined,
+                marginTop: marginTop
+                    ? theme.spaces[marginTop]
+                    : margin
+                    ? theme.spaces[margin]
+                    : undefined,
+                marginRight: marginRight
+                    ? theme.spaces[marginRight]
+                    : margin
+                    ? theme.spaces[margin]
+                    : undefined,
 
                 flex,
                 flexShrink: shrink,
                 flexGrow: grow,
-                flexBasis: basis
+                flexBasis: basis,
             }}
             {...rest}
         >

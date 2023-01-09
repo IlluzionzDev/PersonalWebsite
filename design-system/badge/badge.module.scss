@@ -3,15 +3,15 @@
     @include button-text;
 
     width: fit-content;
-    border-radius: $border-radius;
+    border-radius: $border-radius-sm;
 
     &-default {
         background-color: var(--neutral200);
-        color: var(--neutral700)
+        color: var(--neutral700);
     }
 
     &-active {
         background-color: var(--primary100);
-        color: var(--primary600)
+        color: var(--primary600);
     }
 }

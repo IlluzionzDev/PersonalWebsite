@@ -10,17 +10,28 @@ type LabelProps = {
     className?: CSSProperties | string;
 } & HTMLMotionProps<'span'>;
 
-export const Label: React.FC<LabelProps> = ({ children, className, variant, color, ...rest}) => {
+export const Label: React.FC<LabelProps> = ({
+    children,
+    className,
+    variant,
+    color,
+    ...rest
+}) => {
     const { theme, toggleTheme } = useTheme();
 
     // Define styling
-    const stylingName = variant === 'button' ? 'button-text' : 'label-' + variant;
+    const stylingName =
+        variant === 'button' ? 'button-text' : 'label-' + variant;
     const colors = {
-        color: color ? 'var(--' + color + ')' : undefined
+        color: color ? 'var(--' + color + ')' : undefined,
     };
 
     return (
-        <motion.span style={colors} className={classNames(styles[stylingName], className)} {...rest}>
+        <motion.span
+            style={colors}
+            className={classNames(styles[stylingName], className)}
+            {...rest}
+        >
             {children}
         </motion.span>
     );

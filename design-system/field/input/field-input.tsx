@@ -1,5 +1,5 @@
-import { TextInput } from "@design-system/input/text";
-import { useField } from "../field-context";
+import { TextInput } from '@design-system/input/text';
+import { useField } from '../field-context';
 
 type FieldInputProps = {
     disabled?: boolean;
@@ -9,8 +9,14 @@ type FieldInputProps = {
 /**
  * Expose all variables to a field
  */
-export const FieldInput: React.FC<FieldInputProps> = ({ disabled, value, ...rest }) => {
+export const FieldInput: React.FC<FieldInputProps> = ({
+    disabled,
+    value,
+    ...rest
+}) => {
     const { id, name, error } = useField();
 
-    return <TextInput value={value} hasError={Boolean(error)} id={id} {...rest} />;
+    return (
+        <TextInput value={value} hasError={Boolean(error)} id={id} {...rest} />
+    );
 };

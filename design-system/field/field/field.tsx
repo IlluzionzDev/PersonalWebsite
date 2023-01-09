@@ -10,10 +10,18 @@ type FieldProps = {
 /**
  * Expose all variables to a field
  */
-export const Field: React.FC<FieldProps> = ({ children, id, name, error, ...rest }) => {
+export const Field: React.FC<FieldProps> = ({
+    children,
+    id,
+    name,
+    error,
+    ...rest
+}) => {
     return (
         <motion.div style={{ textAlign: 'left' }} {...rest}>
-            <FieldContext.Provider value={{ id, name, error }}>{children}</FieldContext.Provider>
+            <FieldContext.Provider value={{ id, name, error }}>
+                {children}
+            </FieldContext.Provider>
         </motion.div>
     );
 };
