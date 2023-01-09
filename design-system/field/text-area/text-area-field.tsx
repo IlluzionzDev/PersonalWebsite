@@ -5,19 +5,19 @@ import { CSSProperties } from 'react';
 import { Field } from '../field/field';
 import { FieldError } from '../error/field-error';
 import { FieldLabel } from '../label/field-label';
-import styles from './text-field.module.scss';
-import { TextInput } from '@design-system/input/text';
+import styles from './text-area-field.module.scss';
 import { useField } from '../field-context';
+import { TextArea } from '@design-system/input/text-area';
 
-type FieldInputProps = {
+type FieldAreaInputProps = {
     disabled?: boolean;
     value: string;
-} & React.InputHTMLAttributes<HTMLInputElement>;
+} & React.HTMLAttributes<HTMLTextAreaElement>;
 
 /**
  * Expose all variables to a field
  */
-export const FieldInput: React.FC<FieldInputProps> = ({
+export const FieldAreaInput: React.FC<FieldAreaInputProps> = ({
     disabled,
     value,
     ...rest
@@ -25,11 +25,11 @@ export const FieldInput: React.FC<FieldInputProps> = ({
     const { id, name, error } = useField();
 
     return (
-        <TextInput value={value} hasError={Boolean(error)} id={id} {...rest} />
+        <TextArea value={value} hasError={Boolean(error)} id={id} {...rest} />
     );
 };
 
-type TextFieldProps = {
+type TextAreaFieldProps = {
     className?: CSSProperties | string;
     disabled?: boolean;
     value: string;
@@ -38,12 +38,12 @@ type TextFieldProps = {
     label?: string;
     error?: string;
     motion?: HTMLMotionProps<'div'>;
-} & React.InputHTMLAttributes<HTMLInputElement>;
+} & React.HTMLAttributes<HTMLTextAreaElement>;
 
 /**
  * Master component for a field of text
  */
-export const TextField: React.FC<TextFieldProps> = ({
+export const TextAreaField: React.FC<TextAreaFieldProps> = ({
     className,
     disabled,
     value,
@@ -64,7 +64,7 @@ export const TextField: React.FC<TextFieldProps> = ({
         >
             <Flex direction="column" gap={1}>
                 {label && <FieldLabel htmlFor={id}>{label}</FieldLabel>}
-                <FieldInput
+                <FieldAreaInput
                     id={id}
                     value={value}
                     disabled={disabled}
