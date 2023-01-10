@@ -3,7 +3,7 @@ import { SectionHeader } from '@components/section';
 import { Container } from '@design-system/layout/container';
 import { Flex } from '@design-system/layout/flex';
 import { CenterSection, FullSection } from '@design-system/layout/section';
-import { Heading } from '@design-system/typography';
+import { Heading, Label } from '@design-system/typography';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -12,8 +12,13 @@ import { Box } from '@design-system/layout/box';
 import skills from '@content/skills';
 import { Badge } from '@design-system/badge';
 import { Button } from '@design-system/button';
+import { useRef } from 'react';
+import { useTheme } from '@design-system/theme';
+import { BaseButton } from '@design-system/button/base/base-button';
 
 const About: NextPage = () => {
+    const { theme, toggleTheme } = useTheme();
+
     return (
         <>
             <Head>
@@ -108,10 +113,21 @@ const About: NextPage = () => {
                     direction="column"
                     gap={6}
                 >
-                    <Heading element="h3" variant="heading-2" color="white">
-                        Grab a copy of my resume
+                    <Heading element="h3" variant="heading-1" color="white">
+                        Get A Copy Of My Resume
                     </Heading>
-                    <Button variant="primary">View Resume</Button>
+
+                    <BaseButton
+                        color="secondary900"
+                        background="secondary100"
+                        whileHover={{
+                            scale: 1.05,
+                        }}
+                        transition={{ type: 'spring', bounce: 0.6 }}
+                        className={styles.aboutCta__button}
+                    >
+                        View Resume
+                    </BaseButton>
                 </Flex>
             </Container>
         </>

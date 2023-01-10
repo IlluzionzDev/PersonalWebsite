@@ -10,6 +10,7 @@ import { TextInput } from '@design-system/input/text';
 import { useField } from '../field-context';
 
 type FieldInputProps = {
+    required?: boolean;
     disabled?: boolean;
     value: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
@@ -18,6 +19,7 @@ type FieldInputProps = {
  * Expose all variables to a field
  */
 export const FieldInput: React.FC<FieldInputProps> = ({
+    required,
     disabled,
     value,
     ...rest
@@ -25,12 +27,19 @@ export const FieldInput: React.FC<FieldInputProps> = ({
     const { id, name, error } = useField();
 
     return (
-        <TextInput value={value} hasError={Boolean(error)} id={id} {...rest} />
+        <TextInput
+            required={required}
+            value={value}
+            hasError={Boolean(error)}
+            id={id}
+            {...rest}
+        />
     );
 };
 
 type TextFieldProps = {
     className?: CSSProperties | string;
+    required?: boolean;
     disabled?: boolean;
     value: string;
     name: string;
@@ -45,6 +54,7 @@ type TextFieldProps = {
  */
 export const TextField: React.FC<TextFieldProps> = ({
     className,
+    required,
     disabled,
     value,
     name,
@@ -63,10 +73,16 @@ export const TextField: React.FC<TextFieldProps> = ({
             {...motion}
         >
             <Flex direction="column" gap={1}>
-                {label && <FieldLabel htmlFor={id}>{label}</FieldLabel>}
+                {label && (
+                    <FieldLabel htmlFor={id}>
+                        {label}
+                        {required && <span style={{ color: 'red' }}>*</span>}
+                    </FieldLabel>
+                )}
                 <FieldInput
                     id={id}
                     value={value}
+                    required={required}
                     disabled={disabled}
                     {...rest}
                 />

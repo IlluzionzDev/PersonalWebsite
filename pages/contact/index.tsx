@@ -14,8 +14,11 @@ import { TextField } from '@design-system/field';
 import { useState } from 'react';
 import { TextAreaField } from '@design-system/field/text-area/text-area-field';
 import { Button } from '@design-system/button';
+import { useTheme } from '@design-system/theme';
 
 const Projects: NextPage = () => {
+    const { theme, toggleTheme } = useTheme();
+
     // Mail list state
     const [submitted, setSubmitted] = useState(false);
     const [subject, setSubject] = useState('');
@@ -25,7 +28,7 @@ const Projects: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Jamin Stratford | Projects I Have Built</title>
+                <title>Jamin Stratford | Get In Touch</title>
                 <meta
                     name="description"
                     content="Jamin Stratford is a Full-Stack software developer specialising in Back-End development."
@@ -79,7 +82,7 @@ const Projects: NextPage = () => {
                         method="post"
                         target="_blank"
                         onSubmit={(e) => {
-                            // e.preventDefault();
+                            e.preventDefault();
                             setSubmitted(true);
                         }}
                     >
@@ -113,8 +116,15 @@ const Projects: NextPage = () => {
                             label="Message"
                             value={message}
                             onChange={(e) => setMessage(e.currentTarget.value)}
+                            required
                         />
-                        <Button type="submit" variant="primary">
+                        <Button
+                            type="submit"
+                            variant="primary"
+                            colorScheme="tertiary"
+                            fullWidth
+                            className={styles.contactForm__submit}
+                        >
                             Submit
                         </Button>
                     </form>

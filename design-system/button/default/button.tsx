@@ -1,74 +1,73 @@
-import { Box } from '@design-system/layout/box';
 import { useTheme } from '@design-system/theme';
-import { Label } from '@design-system/typography';
-import classNames from 'classnames';
-import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import { CSSProperties } from 'react';
+import { BaseButton, BaseButtonProps } from '../base/base-button';
 import styles from './button.module.scss';
 
-// All types of buttons
-type ButtonVariants =
-    | 'primary'
-    | 'secondary'
-    | 'tertiary'
-    | 'success'
-    | 'success-light'
-    | 'error'
-    | 'error-light';
+type ButtonVariants = 'primary' | 'secondary' | 'tertiary';
 
 type ButtonProps = {
+    className?: CSSProperties | string;
     variant: ButtonVariants;
-    startIcon?: ReactNode;
-    endIcon?: ReactNode;
-    disabled?: boolean;
-    fullWidth?: boolean;
-} & React.HTMLAttributes<HTMLButtonElement>;
+    colorScheme?: string;
+} & BaseButtonProps;
 
 export const Button: React.FC<ButtonProps> = ({
     children,
+    className,
     variant,
-    startIcon,
-    endIcon,
-    disabled,
-    fullWidth,
+    colorScheme,
     ...rest
 }) => {
-    const { theme, toggleTheme } = useTheme();
+    const { theme } = useTheme();
 
-    const variantStyle = disabled ? '' : variant + 'Button';
+    // Different color styles
+    let buttonVariantStyles: BaseButtonProps = {};
 
-    // Hover animation based on button state
-    const buttonHover = {
-        scale: disabled ? 1 : 1.05,
-    };
+    if (variant === 'primary') {
+        let focusStyles = {
+            background: theme.colors[colorScheme + '600'],
+        };
 
-    const buttonTap = {
-        scale: disabled ? 1 : 0.95,
-    };
+        buttonVariantStyles = {
+            background: colorScheme + '500',
+            color: 'white',
+            whileHover: focusStyles,
+            whileFocus: focusStyles,
+        };
+    } else if (variant === 'secondary') {
+        let focusStyles = {
+            background: 'transparent',
+        };
+
+        buttonVariantStyles = {
+            background: colorScheme + '100',
+            borderColor: colorScheme + '100',
+            color: colorScheme + '600',
+            whileHover: focusStyles,
+            whileFocus: focusStyles,
+        };
+    } else if (variant === 'tertiary') {
+        let focusStyles = {
+            background: theme.colors[colorScheme + '100'],
+        };
+
+        buttonVariantStyles = {
+            background: undefined,
+            borderColor: colorScheme + '200',
+            color: colorScheme + '600',
+            whileHover: focusStyles,
+            whileFocus: focusStyles,
+        };
+    }
 
     return (
-        <motion.div
-            transition={{ type: 'spring', bounce: 0.5, duration: 0.4 }}
-            initial={{ scale: 1 }}
-            whileHover={buttonHover}
-            whileTap={buttonTap}
+        <BaseButton
+            transition={{ type: 'spring', bounce: 0.6 }}
+            className={className}
+            {...buttonVariantStyles}
+            {...rest}
         >
-            <button
-                className={classNames(
-                    styles.baseButton,
-                    styles[variantStyle],
-                    fullWidth ? styles.fullWidth : ''
-                )}
-                disabled={disabled}
-                aria-disabled={disabled}
-                {...rest}
-            >
-                {startIcon && (
-                    <Box className={styles.iconWrapper}>{startIcon}</Box>
-                )}
-                <Label variant="button">{children}</Label>
-                {endIcon && <Box className={styles.iconWrapper}>{endIcon}</Box>}
-            </button>
-        </motion.div>
+            {children}
+        </BaseButton>
     );
 };

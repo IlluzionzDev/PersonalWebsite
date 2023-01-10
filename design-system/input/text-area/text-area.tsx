@@ -5,6 +5,7 @@ import styles from './text-area.module.scss';
 
 type TextAreaProps = {
     className?: CSSProperties | string;
+    required?: boolean;
     disabled?: boolean;
     value: string;
     hasError?: boolean;
@@ -17,6 +18,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
     className,
     value,
     hasError,
+    required,
     disabled,
     ...rest
 }) => {
@@ -36,6 +38,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
                 hasError ? styles.error : '',
                 className
             )}
+            required={required}
             rows={4}
             cols={50}
             disabled={disabled}

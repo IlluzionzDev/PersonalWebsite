@@ -37,6 +37,19 @@
 }
 
 .aboutCta {
+    text-align: center;
+
     background-image: url('/resume-download-background.webp');
     background-size: cover;
+    // background: linear-gradient(
+    //     to bottom right,
+    //     rgb(var(--secondary500RGB)),
+    //     rgb(var(--secondary600RGB))
+    // );
+
+    @include hover-shadow;
+
+    &__button {
+        width: 30%;
+    }
 }
