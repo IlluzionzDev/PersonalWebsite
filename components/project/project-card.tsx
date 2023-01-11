@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
             gap={4}
             direction="column"
             radius="lg"
-            flex="auto"
+            className={styles.projectCard}
         >
             <Flex direction="row" justifyContent="space-between">
                 <Box>

@@ -1,5 +1,9 @@
 .body-xl {
     @include body-xl;
+
+    span {
+        @include body-xl-highlight;
+    }
 }
 
 .body-xl-highlight {
@@ -8,6 +12,10 @@
 
 .body-lg {
     @include body-lg;
+
+    span {
+        @include body-lg-highlight;
+    }
 }
 
 .body-lg-highlight {
@@ -16,6 +24,10 @@
 
 .body-md {
     @include body-md;
+
+    span {
+        @include body-md-highlight;
+    }
 }
 
 .body-md-highlight {
@@ -24,6 +36,10 @@
 
 .body-sm {
     @include body-sm;
+
+    span {
+        @include body-sm-highlight;
+    }
 }
 
 .body-sm-highlight {

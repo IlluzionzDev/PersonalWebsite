@@ -13,6 +13,7 @@ export type BaseButtonProps = {
     color?: string;
     background?: string;
     borderColor?: string;
+    radius?: 'sm' | 'md' | 'lg';
     startIcon?: ReactNode;
     endIcon?: ReactNode;
     disabled?: boolean;
@@ -27,6 +28,7 @@ export const BaseButton: React.FC<BaseButtonProps> = ({
     color,
     background,
     borderColor,
+    radius,
     startIcon,
     endIcon,
     disabled,
@@ -62,6 +64,9 @@ export const BaseButton: React.FC<BaseButtonProps> = ({
                 borderColor: borderColor
                     ? 'var(--' + borderColor + ')'
                     : undefined,
+                borderRadius: radius
+                    ? theme.borderRadius[radius]
+                    : theme.borderRadius['sm'],
                 ...style,
             }}
             {...rest}

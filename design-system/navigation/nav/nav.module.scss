@@ -2,6 +2,10 @@
     width: 100%;
     padding: $spacing-7 0;
 
+    @include md {
+        padding: $spacing-5 $spacing-5;
+    }
+
     // List span
     &__list {
         width: 100%;
@@ -24,5 +28,67 @@
         justify-content: flex-start;
         align-items: center;
         gap: $spacing-4;
+    }
+
+    @include sm {
+        display: none;
+    }
+}
+
+.hamburger {
+    // removes default border on button element
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--black);
+
+    cursor: pointer;
+    position: relative;
+
+    &:focus {
+        background-color: var(--primary100);
+    }
+
+    @include sm {
+        display: flex;
+        align-items: center;
+    }
+
+    &__wrapper {
+        z-index: 1000;
+        display: none;
+        margin-left: auto;
+
+        @include sm {
+            display: flex;
+        }
+    }
+}
+
+.expandedLinks {
+    display: none;
+
+    @include sm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 999;
+        width: 60%;
+        height: var(--vh);
+        right: 0;
+        top: 0;
+        background: var(--tertiary200);
+
+        &__list {
+            margin-top: 60px;
+            gap: $spacing-4;
+            padding: $spacing-7;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            text-align: center;
+        }
     }
 }

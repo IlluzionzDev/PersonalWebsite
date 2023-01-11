@@ -8,7 +8,7 @@ import { Heading, Label } from '@design-system/typography';
 import Link from 'next/link';
 import { Box } from '@design-system/layout/box';
 import { Flex } from '@design-system/layout/flex';
-import { TextButton } from '@design-system/button';
+import { Button, TextButton } from '@design-system/button';
 import {
     FaArrowRight,
     FaGithub,
@@ -18,8 +18,13 @@ import {
 import { MainNav } from '@components/navigation';
 import projects from '@content/projects.json';
 import ProjectCard from '@components/project/project-card';
+import { AnimatedEffect } from '@components/effect/animated-effect';
+import { useTheme } from '@design-system/theme';
+import { SocialLinks } from '@components/socials/social-links';
 
 const Home: NextPage = () => {
+    const { theme } = useTheme();
+
     return (
         <>
             <Head>
@@ -48,41 +53,31 @@ const Home: NextPage = () => {
                                     <span>Next-Gen</span>
                                     <br />
                                     <span className={styles.hero__highlight}>
-                                        Software Engineer
+                                        Software{' '}
                                     </span>
+                                    Engineer
                                 </Heading>
                             </Box>
-                            <Flex direction="row" alignItems="center">
-                                <Flex gap={4} alignItems="center">
-                                    <Link
-                                        href="https://github.com/IlluzionzDev"
-                                        target="_blank"
-                                        aria-label="GitHub"
-                                    >
-                                        <FaGithub />
-                                    </Link>
-
-                                    <Link
-                                        href="https://www.linkedin.com/in/jaminstratford/"
-                                        target="_blank"
-                                    >
-                                        <FaLinkedin />
-                                    </Link>
-
-                                    <Link
-                                        href="https://www.instagram.com/jaminstratford/"
-                                        target="_blank"
-                                    >
-                                        <FaInstagram />
-                                    </Link>
-
+                            <Flex
+                                direction="row"
+                                alignItems="center"
+                                className={styles.subHero}
+                            >
+                                <Flex
+                                    gap={7}
+                                    alignItems="center"
+                                    className={styles.subHero__links}
+                                >
                                     <Link href="/about">
-                                        <TextButton
+                                        <Button
+                                            variant="primary"
+                                            colorScheme="tertiary"
                                             endIcon={<FaArrowRight size={16} />}
                                         >
                                             Find Out More
-                                        </TextButton>
+                                        </Button>
                                     </Link>
+                                    <SocialLinks />
                                 </Flex>
 
                                 <h2 className={styles.hero__splash}>
@@ -95,26 +90,47 @@ const Home: NextPage = () => {
                         </Flex>
                     </Container>
                 </CenterSection>
+                <AnimatedEffect />
             </FullSection>
             <Container>
-                <Box paddingTop={12} paddingBottom={12}>
-                    <Heading element="h2" variant="heading-1" color="black">
-                        Featured Projects
-                    </Heading>
-                    <Label variant="xl" color="primary800">
-                        Take a look at some of my favourite projects I&apos;ve
-                        created
-                    </Label>
-                    <Flex direction="row" marginTop={10} gap={7}>
-                        {projects.projects.map((project, index) => {
-                            return (
-                                <ProjectCard
-                                    key={index}
-                                    index={index}
-                                    project={project}
-                                />
-                            );
-                        })}
+                <Box paddingTop={10} paddingBottom={10}>
+                    <Box className={styles.projectTitle}>
+                        <Heading element="h2" variant="heading-1" color="black">
+                            Featured Projects
+                        </Heading>
+                        <Label variant="xl" color="primary800">
+                            Take a look at some of my favourite projects
+                            I&apos;ve created
+                        </Label>
+                    </Box>
+
+                    <Flex direction="column" gap={7}>
+                        <Flex
+                            direction="row"
+                            marginTop={10}
+                            gap={7}
+                            wrap="wrap"
+                        >
+                            {projects.projects.map((project, index) => {
+                                return (
+                                    <ProjectCard
+                                        key={index}
+                                        index={index}
+                                        project={project}
+                                    />
+                                );
+                            })}
+                        </Flex>
+                        <Flex justifyContent="space-between" direction="row">
+                            <div></div>
+                            <Link href="/projects">
+                                <TextButton
+                                    endIcon={<FaArrowRight size={16} />}
+                                >
+                                    View More
+                                </TextButton>
+                            </Link>
+                        </Flex>
                     </Flex>
                 </Box>
             </Container>

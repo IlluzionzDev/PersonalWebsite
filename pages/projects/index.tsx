@@ -42,7 +42,7 @@ const Projects: NextPage = () => {
                 </Container>
             </CenterSection>
             <Container>
-                <Flex direction="row" gap={7} wrap="wrap">
+                <Flex direction="row" gap={7} wrap="wrap" marginBottom={10}>
                     {projects.projects.map((project, index) => {
                         return (
                             <ProjectCard

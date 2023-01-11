@@ -1,4 +1,8 @@
-import { ReactNode } from 'react';
+import { Box } from '@design-system/layout/box';
+import { Container } from '@design-system/layout/container';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ReactNode, useEffect, useState } from 'react';
+import { FaBars } from 'react-icons/fa';
 import styles from './nav.module.scss';
 
 type NavProps = {
@@ -7,18 +11,72 @@ type NavProps = {
 };
 
 export const Nav: React.FC<NavProps> = ({ logo, links }) => {
+    const [expandedNav, setExpandedNav] = useState(false);
+
+    useEffect(() => {
+        if (expandedNav) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [expandedNav]);
+
     return (
-        <nav className={styles.nav}>
-            <ul className={styles.nav__list}>
-                <li className={styles.logo}>{logo}</li>
-                <li className={styles.links}>
-                    <ul className={styles.links__list}>
-                        {links.map((link, index) => {
-                            return <li key={index}>{link}</li>;
-                        })}
+        <>
+            <Container>
+                <nav className={styles.nav}>
+                    <ul className={styles.nav__list}>
+                        <li className={styles.logo}>{logo}</li>
+                        <li className={styles.links}>
+                            <ul className={styles.links__list}>
+                                {links.map((link, index) => {
+                                    return <li key={index}>{link}</li>;
+                                })}
+                            </ul>
+                        </li>
+                        <li className={styles.hamburger__wrapper}>
+                            <button
+                                className={styles.hamburger}
+                                onClick={() => setExpandedNav((prev) => !prev)}
+                            >
+                                <FaBars />
+                            </button>
+                        </li>
                     </ul>
-                </li>
-            </ul>
-        </nav>
+                </nav>
+            </Container>
+            <AnimatePresence>
+                {expandedNav && (
+                    <ul
+                        id="expanded-nav"
+                        onClick={() => setExpandedNav((prev) => !prev)}
+                    >
+                        <motion.li
+                            onClick={(e) => e.stopPropagation()}
+                            className={styles.expandedLinks}
+                            initial={{
+                                x: 500,
+                            }}
+                            animate={{
+                                x: 0,
+                            }}
+                            transition={{
+                                type: 'spring',
+                                bounce: 0.1,
+                            }}
+                            exit={{
+                                x: 500,
+                            }}
+                        >
+                            <ul className={styles.expandedLinks__list}>
+                                {links.map((link, index) => {
+                                    return <li key={index}>{link}</li>;
+                                })}
+                            </ul>
+                        </motion.li>
+                    </ul>
+                )}
+            </AnimatePresence>
+        </>
     );
 };

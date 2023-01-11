@@ -1,4 +1,11 @@
 .projectCard {
+    width: 100%;
+    flex: 30%;
+
+    @include md {
+        flex: 0 0 100%;
+    }
+
     &__skills {
         margin-top: auto;
     }

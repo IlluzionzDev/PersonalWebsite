@@ -2,8 +2,8 @@ import { MainNav } from '@components/navigation';
 import { SectionHeader } from '@components/section';
 import { Container } from '@design-system/layout/container';
 import { Flex } from '@design-system/layout/flex';
-import { CenterSection, FullSection } from '@design-system/layout/section';
-import { Heading, Label } from '@design-system/typography';
+import { CenterSection } from '@design-system/layout/section';
+import { Body, Heading } from '@design-system/typography';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -11,13 +11,12 @@ import styles from './about.module.scss';
 import { Box } from '@design-system/layout/box';
 import skills from '@content/skills';
 import { Badge } from '@design-system/badge';
-import { Button } from '@design-system/button';
-import { useRef } from 'react';
 import { useTheme } from '@design-system/theme';
-import { BaseButton } from '@design-system/button/base/base-button';
+import { useRouter } from 'next/router';
 
 const About: NextPage = () => {
     const { theme, toggleTheme } = useTheme();
+    const router = useRouter();
 
     return (
         <>
@@ -41,42 +40,54 @@ const About: NextPage = () => {
                     />
                 </Container>
             </CenterSection>
+
             <Container>
                 <Flex direction="column" gap={2}>
                     <Heading
                         element="h3"
-                        variant="heading-1"
+                        variant="heading-3"
                         color="secondary900"
+                        className={styles.backgroundSection__header}
                     >
                         Background
                     </Heading>
-                    <Flex direction="row" justifyContent="space-between">
+                    <Flex
+                        direction="row"
+                        justifyContent="space-between"
+                        className={styles.backgroundSection}
+                    >
                         <Flex
                             direction="column"
                             className={styles.backgroundInfo}
+                            gap={4}
+                            color="neutral800"
                         >
-                            I’m a Full-Stack developer specialising in back-end
-                            development. I love working on new innovative
-                            projects and optimising them for flawless design and
-                            functionality. I’ve been in the industry for many
-                            years and have developed numerous technical skills
-                            allowing me to turn my endless creative ideas into
-                            reality.
-                            <br />
-                            <br />
-                            Fast-forward to today, I’m hacking together useful
-                            and futuristic web experiences using a modern
-                            JavaScript stack.
-                            <br />
-                            <br />
-                            Here are some of the current technologies I am
-                            using:
+                            <Body variant="xl">
+                                I&apos;m a <span>Full-Stack developer </span>
+                                specialising in
+                                <span> back-end development</span>. I love
+                                working on new innovative projects and
+                                optimising them for flawless design and
+                                functionality. I&apos;ve been in the industry
+                                for many years and have developed numerous
+                                technical skills allowing me to turn my endless
+                                creative ideas into reality.
+                            </Body>
+                            <Body variant="xl">
+                                Fast-forward to today, I&apos;m hacking together
+                                useful and futuristic web experiences using a
+                                modern JavaScript stack.
+                            </Body>
+                            <Body variant="xl">
+                                Here are some of the
+                                <span> current technologies</span> I am using:
+                            </Body>
                             <Flex
                                 direction="row"
                                 className={styles.skillsWrapper}
                                 wrap="wrap"
                                 gap={4}
-                                marginTop={7}
+                                marginTop={2}
                             >
                                 {skills.map((skill, index) => {
                                     return (
@@ -88,24 +99,22 @@ const About: NextPage = () => {
                             </Flex>
                         </Flex>
                         <Flex className={styles.backgroundProfile}>
-                            <CenterSection>
-                                <Box className={styles.imageContainer}>
-                                    <Image
-                                        src="/jamin-stratford.webp"
-                                        alt="Profile Image"
-                                        fill
-                                        className={styles.image}
-                                    />
-                                </Box>
-                            </CenterSection>
+                            <Box className={styles.imageContainer}>
+                                <Image
+                                    src="/jamin-stratford.webp"
+                                    alt="Jamin Stratford Profile Picture"
+                                    fill
+                                    className={styles.image}
+                                />
+                            </Box>
                         </Flex>
                     </Flex>
                 </Flex>
-                <Flex
+                {/* <Flex
                     justifyContent="center"
                     alignItems="center"
                     marginTop={12}
-                    marginBottom={12}
+                    marginBottom={10}
                     paddingTop={11}
                     paddingBottom={11}
                     radius="lg"
@@ -113,22 +122,27 @@ const About: NextPage = () => {
                     direction="column"
                     gap={6}
                 >
-                    <Heading element="h3" variant="heading-1" color="white">
+                    <Heading
+                        element="h3"
+                        variant="heading-1"
+                        color="white"
+                        className={styles.aboutCta__title}
+                    >
                         Get A Copy Of My Resume
                     </Heading>
-
                     <BaseButton
                         color="secondary900"
-                        background="secondary100"
+                        background="white"
                         whileHover={{
                             scale: 1.05,
                         }}
                         transition={{ type: 'spring', bounce: 0.6 }}
                         className={styles.aboutCta__button}
+                        onClick={() => router.push('/resume.pdf')}
                     >
                         View Resume
                     </BaseButton>
-                </Flex>
+                </Flex> */}
             </Container>
         </>
     );

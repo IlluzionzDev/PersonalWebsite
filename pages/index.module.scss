@@ -9,10 +9,18 @@
 .hero {
     &__splash {
         margin-left: auto;
+
+        @include lg {
+            margin-left: 0 !important;
+        }
     }
 
     h1 {
         text-align: left;
+
+        @include lg {
+            text-align: center !important;
+        }
     }
 
     &__highlight {
@@ -23,5 +31,28 @@
             var(--tertiary500),
             var(--secondary700)
         );
+    }
+
+    @include lg {
+        gap: $spacing-7 !important;
+    }
+}
+
+.subHero {
+    @include lg {
+        flex-direction: column-reverse !important;
+        gap: $spacing-7 !important;
+    }
+
+    &__links {
+        @include lg {
+            flex-direction: column !important;
+        }
+    }
+}
+
+.projectTitle {
+    @include lg {
+        text-align: center;
     }
 }

@@ -15,6 +15,7 @@ import { useState } from 'react';
 import { TextAreaField } from '@design-system/field/text-area/text-area-field';
 import { Button } from '@design-system/button';
 import { useTheme } from '@design-system/theme';
+import { SocialLinks } from '@components/socials/social-links';
 
 const Projects: NextPage = () => {
     const { theme, toggleTheme } = useTheme();
@@ -52,29 +53,7 @@ const Projects: NextPage = () => {
             </CenterSection>
             <Container>
                 <CenterSection>
-                    <Flex direction="row" gap={4} alignItems="center">
-                        <Link
-                            href="https://github.com/IlluzionzDev"
-                            target="_blank"
-                            aria-label="GitHub"
-                        >
-                            <FaGithub />
-                        </Link>
-
-                        <Link
-                            href="https://www.linkedin.com/in/jaminstratford/"
-                            target="_blank"
-                        >
-                            <FaLinkedin />
-                        </Link>
-
-                        <Link
-                            href="https://www.instagram.com/jaminstratford/"
-                            target="_blank"
-                        >
-                            <FaInstagram />
-                        </Link>
-                    </Flex>
+                    <SocialLinks />
 
                     <form
                         className={styles.contactForm}
@@ -83,6 +62,11 @@ const Projects: NextPage = () => {
                         target="_blank"
                         onSubmit={(e) => {
                             e.preventDefault();
+
+                            if (!email.includes('@')) {
+                                e.preventDefault();
+                            }
+
                             setSubmitted(true);
                         }}
                     >
