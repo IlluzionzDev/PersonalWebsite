@@ -1,0 +1,32 @@
+.projectCard {
+    width: 100%;
+    flex: 30%;
+    cursor: pointer;
+    position: relative;
+
+    @include md {
+        flex: 0 0 100%;
+    }
+
+    &__skills {
+        margin-top: auto;
+    }
+
+    &__title {
+        a::before {
+            content: '' !important;
+            display: block !important;
+            position: absolute !important;
+            z-index: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            top: 0px !important;
+            left: 0px !important;
+        }
+    }
+}
+
+.github {
+    position: relative;
+    z-index: 1 !important;
+}

@@ -1,0 +1,58 @@
+.gradient__bg {
+    background: linear-gradient(
+        to right,
+        rgba(var(--tertiary100RGB), 0.25),
+        rgba(var(--secondary100RGB), 0.25)
+    );
+}
+
+.hero {
+    &__splash {
+        margin-left: auto;
+
+        @include lg {
+            margin-left: 0 !important;
+        }
+    }
+
+    h1 {
+        text-align: left;
+
+        @include lg {
+            text-align: center !important;
+        }
+    }
+
+    &__highlight {
+        @include text-gradient;
+
+        background-image: linear-gradient(
+            to right,
+            var(--tertiary500),
+            var(--secondary700)
+        );
+    }
+
+    @include lg {
+        gap: $spacing-7 !important;
+    }
+}
+
+.subHero {
+    @include lg {
+        flex-direction: column-reverse !important;
+        gap: $spacing-7 !important;
+    }
+
+    &__links {
+        @include lg {
+            flex-direction: column !important;
+        }
+    }
+}
+
+.projectTitle {
+    @include lg {
+        text-align: center;
+    }
+}

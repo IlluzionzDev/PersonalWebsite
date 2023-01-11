@@ -1,0 +1,26 @@
+.footer {
+    width: 100%;
+
+    &__author {
+        @include text-gradient;
+
+        background-image: linear-gradient(
+            to right,
+            var(--tertiary500),
+            var(--secondary700)
+        );
+
+        padding-bottom: $spacing-2;
+    }
+
+    &__decoration {
+        width: 100%;
+
+        background: linear-gradient(
+            to right,
+            var(--tertiary500),
+            var(--secondary700)
+        );
+        height: 4px;
+    }
+}

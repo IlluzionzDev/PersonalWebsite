@@ -18,7 +18,7 @@ const skills = [
     'CI/CD',
     'Linux',
     'Docker',
-    'AWS'
-]
+    'AWS',
+];
 
-export default skills
+export default skills;
