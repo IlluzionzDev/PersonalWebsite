@@ -60,13 +60,13 @@
 .aboutCta {
     text-align: center;
 
-    // background-image: url('/resume-download-background.webp');
-    // background-size: cover;
     background: linear-gradient(
         to bottom right,
         rgb(var(--secondary800RGB)),
         rgb(var(--secondary900RGB))
     );
+    // background-size: cover;
+    // background-image: url('/resume-download-background.webp');
 
     @include hover-shadow;
 

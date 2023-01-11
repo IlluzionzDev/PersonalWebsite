@@ -13,6 +13,8 @@ import skills from '@content/skills';
 import { Badge } from '@design-system/badge';
 import { useTheme } from '@design-system/theme';
 import { useRouter } from 'next/router';
+import { PageWrapper } from '@design-system/layout/wrapper';
+import { Footer } from '@components/navigation/footer/footer';
 
 const About: NextPage = () => {
     const { theme, toggleTheme } = useTheme();
@@ -24,126 +26,98 @@ const About: NextPage = () => {
                 <title>Jamin Stratford | About Jamin Stratford</title>
                 <meta
                     name="description"
-                    content="Jamin Stratford is a Full-Stack software developer specialising in Back-End development."
+                    content="I'm a Full-Stack developer specialising in back-end development. I love working on new innovative projects and optimising them for flawless design and functionality"
                 ></meta>
                 <link rel="canonical" href="https://jaminstratford.com/about" />
             </Head>
-            <div className={styles.pageBg}></div>
-            <MainNav />
-            <CenterSection>
-                <Container>
-                    <SectionHeader
-                        color="secondary"
-                        title="About Me"
-                        heading="Who is Jamin Stratford?"
-                        subHeading="Get to know a bit about my backstory and what I'm up to"
-                    />
-                </Container>
-            </CenterSection>
+            <PageWrapper>
+                <div className={styles.pageBg}></div>
+                <MainNav colorScheme="secondary" />
+                <CenterSection>
+                    <Container>
+                        <SectionHeader
+                            color="secondary"
+                            title="About Me"
+                            heading="Who is Jamin Stratford?"
+                            subHeading="Get to know a bit about my backstory and what I'm up to"
+                        />
+                    </Container>
+                </CenterSection>
 
-            <Container>
-                <Flex direction="column" gap={2}>
-                    <Heading
-                        element="h3"
-                        variant="heading-3"
-                        color="secondary900"
-                        className={styles.backgroundSection__header}
-                    >
-                        Background
-                    </Heading>
-                    <Flex
-                        direction="row"
-                        justifyContent="space-between"
-                        className={styles.backgroundSection}
-                    >
-                        <Flex
-                            direction="column"
-                            className={styles.backgroundInfo}
-                            gap={4}
-                            color="neutral800"
+                <Container>
+                    <Flex direction="column" gap={2}>
+                        <Heading
+                            element="h3"
+                            variant="heading-3"
+                            color="secondary900"
+                            className={styles.backgroundSection__header}
                         >
-                            <Body variant="xl">
-                                I&apos;m a <span>Full-Stack developer </span>
-                                specialising in
-                                <span> back-end development</span>. I love
-                                working on new innovative projects and
-                                optimising them for flawless design and
-                                functionality. I&apos;ve been in the industry
-                                for many years and have developed numerous
-                                technical skills allowing me to turn my endless
-                                creative ideas into reality.
-                            </Body>
-                            <Body variant="xl">
-                                Fast-forward to today, I&apos;m hacking together
-                                useful and futuristic web experiences using a
-                                modern JavaScript stack.
-                            </Body>
-                            <Body variant="xl">
-                                Here are some of the
-                                <span> current technologies</span> I am using:
-                            </Body>
+                            Background
+                        </Heading>
+                        <Flex
+                            direction="row"
+                            justifyContent="space-between"
+                            className={styles.backgroundSection}
+                        >
                             <Flex
-                                direction="row"
-                                className={styles.skillsWrapper}
-                                wrap="wrap"
+                                direction="column"
+                                className={styles.backgroundInfo}
                                 gap={4}
-                                marginTop={2}
+                                color="neutral800"
                             >
-                                {skills.map((skill, index) => {
-                                    return (
-                                        <Badge key={index} variant="active">
-                                            {skill}
-                                        </Badge>
-                                    );
-                                })}
+                                <Body variant="xl">
+                                    I&apos;m a{' '}
+                                    <span>Full-Stack developer </span>
+                                    specialising in
+                                    <span> back-end development</span>. I love
+                                    working on new innovative projects and
+                                    optimising them for flawless design and
+                                    functionality. I&apos;ve been in the
+                                    industry for many years and have developed
+                                    numerous technical skills allowing me to
+                                    turn my endless creative ideas into reality.
+                                </Body>
+                                <Body variant="xl">
+                                    Fast-forward to today, I&apos;m hacking
+                                    together useful and futuristic web
+                                    experiences using a modern JavaScript stack.
+                                </Body>
+                                <Body variant="xl">
+                                    Here are some of the
+                                    <span> current technologies</span> I am
+                                    using:
+                                </Body>
+                                <Flex
+                                    direction="row"
+                                    className={styles.skillsWrapper}
+                                    wrap="wrap"
+                                    gap={4}
+                                    marginTop={2}
+                                >
+                                    {skills.map((skill, index) => {
+                                        return (
+                                            <Badge key={index} variant="active">
+                                                {skill}
+                                            </Badge>
+                                        );
+                                    })}
+                                </Flex>
+                            </Flex>
+                            <Flex className={styles.backgroundProfile}>
+                                <Box className={styles.imageContainer}>
+                                    <Image
+                                        src="/jamin-stratford.webp"
+                                        alt="Jamin Stratford Profile Picture"
+                                        fill
+                                        className={styles.image}
+                                    />
+                                </Box>
                             </Flex>
                         </Flex>
-                        <Flex className={styles.backgroundProfile}>
-                            <Box className={styles.imageContainer}>
-                                <Image
-                                    src="/jamin-stratford.webp"
-                                    alt="Jamin Stratford Profile Picture"
-                                    fill
-                                    className={styles.image}
-                                />
-                            </Box>
-                        </Flex>
                     </Flex>
-                </Flex>
-                {/* <Flex
-                    justifyContent="center"
-                    alignItems="center"
-                    marginTop={12}
-                    marginBottom={10}
-                    paddingTop={11}
-                    paddingBottom={11}
-                    radius="lg"
-                    className={styles.aboutCta}
-                    direction="column"
-                    gap={6}
-                >
-                    <Heading
-                        element="h3"
-                        variant="heading-1"
-                        color="white"
-                        className={styles.aboutCta__title}
-                    >
-                        Get A Copy Of My Resume
-                    </Heading>
-                    <BaseButton
-                        color="secondary900"
-                        background="white"
-                        whileHover={{
-                            scale: 1.05,
-                        }}
-                        transition={{ type: 'spring', bounce: 0.6 }}
-                        className={styles.aboutCta__button}
-                        onClick={() => router.push('/resume.pdf')}
-                    >
-                        View Resume
-                    </BaseButton>
-                </Flex> */}
-            </Container>
+                </Container>
+            </PageWrapper>
+            <Footer />
         </>
     );
 };

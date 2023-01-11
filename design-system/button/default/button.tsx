@@ -41,7 +41,7 @@ export const Button: React.FC<ButtonProps> = ({
 
         buttonVariantStyles = {
             background: colorScheme + '100',
-            borderColor: colorScheme + '100',
+            borderColor: colorScheme + '200',
             color: colorScheme + '600',
             whileHover: focusStyles,
             whileFocus: focusStyles,
@@ -53,7 +53,7 @@ export const Button: React.FC<ButtonProps> = ({
 
         buttonVariantStyles = {
             background: undefined,
-            borderColor: colorScheme + '200',
+            borderColor: colorScheme + '300',
             color: colorScheme + '600',
             whileHover: focusStyles,
             whileFocus: focusStyles,

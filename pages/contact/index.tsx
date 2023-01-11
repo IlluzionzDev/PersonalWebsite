@@ -16,6 +16,8 @@ import { TextAreaField } from '@design-system/field/text-area/text-area-field';
 import { Button } from '@design-system/button';
 import { useTheme } from '@design-system/theme';
 import { SocialLinks } from '@components/socials/social-links';
+import { PageWrapper } from '@design-system/layout/wrapper';
+import { Footer } from '@components/navigation/footer/footer';
 
 const Projects: NextPage = () => {
     const { theme, toggleTheme } = useTheme();
@@ -32,88 +34,94 @@ const Projects: NextPage = () => {
                 <title>Jamin Stratford | Get In Touch</title>
                 <meta
                     name="description"
-                    content="Jamin Stratford is a Full-Stack software developer specialising in Back-End development."
+                    content="Get in touch with Jamin Stratford. I'm open to new ideas, collaborations, or general feedback on my work."
                 ></meta>
                 <link
                     rel="canonical"
                     href="https://jaminstratford.com/contact"
                 />
             </Head>
-            <div className={styles.pageBg}></div>
-            <MainNav />
-            <CenterSection>
-                <Container>
-                    <SectionHeader
-                        color="primary"
-                        title="Contact"
-                        heading="Say Hello"
-                        subHeading="Get in touch with me to empower your next project"
-                    />
-                </Container>
-            </CenterSection>
-            <Container>
+
+            <PageWrapper>
+                <div className={styles.pageBg}></div>
+                <MainNav colorScheme="tertiary" />
                 <CenterSection>
-                    <SocialLinks />
-
-                    <form
-                        className={styles.contactForm}
-                        action="https://public.herotofu.com/v1/29ec62b0-8fdf-11ed-a003-6f0b76086b1c"
-                        method="post"
-                        target="_blank"
-                        onSubmit={(e) => {
-                            e.preventDefault();
-
-                            if (!email.includes('@')) {
-                                e.preventDefault();
-                            }
-
-                            setSubmitted(true);
-                        }}
-                    >
-                        <TextField
-                            id="subject"
-                            name="subject"
-                            label="Subject"
-                            value={subject}
-                            onChange={(e) => setSubject(e.currentTarget.value)}
-                            required
+                    <Container>
+                        <SectionHeader
+                            color="primary"
+                            title="Contact"
+                            heading="Say Hello"
+                            subHeading="Get in touch with me to empower your next project"
                         />
-                        <TextField
-                            id="email"
-                            name="email"
-                            label="Email"
-                            value={email}
-                            error={
-                                !email.includes('@') && submitted
-                                    ? 'Please provide valid email'
-                                    : ''
-                            }
-                            onChange={(e) => {
-                                setEmail(e.currentTarget.value);
-                                setSubmitted(false);
-                            }}
-                            required
-                        />
-                        <TextAreaField
-                            id="message"
-                            name="message"
-                            label="Message"
-                            value={message}
-                            onChange={(e) => setMessage(e.currentTarget.value)}
-                            required
-                        />
-                        <Button
-                            type="submit"
-                            variant="primary"
-                            colorScheme="tertiary"
-                            fullWidth
-                            className={styles.contactForm__submit}
-                        >
-                            Submit
-                        </Button>
-                    </form>
+                    </Container>
                 </CenterSection>
-            </Container>
+                <Container>
+                    <CenterSection>
+                        <SocialLinks />
+
+                        <form
+                            className={styles.contactForm}
+                            action="https://public.herotofu.com/v1/29ec62b0-8fdf-11ed-a003-6f0b76086b1c"
+                            method="post"
+                            target="_blank"
+                            onSubmit={(e) => {
+                                if (!email.includes('@')) {
+                                    e.preventDefault();
+                                }
+
+                                setSubmitted(true);
+                            }}
+                        >
+                            <TextField
+                                id="subject"
+                                name="subject"
+                                label="Subject"
+                                value={subject}
+                                onChange={(e) =>
+                                    setSubject(e.currentTarget.value)
+                                }
+                                required
+                            />
+                            <TextField
+                                id="email"
+                                name="email"
+                                label="Email"
+                                value={email}
+                                error={
+                                    !email.includes('@') && submitted
+                                        ? 'Please provide valid email'
+                                        : ''
+                                }
+                                onChange={(e) => {
+                                    setEmail(e.currentTarget.value);
+                                    setSubmitted(false);
+                                }}
+                                required
+                            />
+                            <TextAreaField
+                                id="message"
+                                name="message"
+                                label="Message"
+                                value={message}
+                                onChange={(e) =>
+                                    setMessage(e.currentTarget.value)
+                                }
+                                required
+                            />
+                            <Button
+                                type="submit"
+                                variant="primary"
+                                colorScheme="tertiary"
+                                fullWidth
+                                className={styles.contactForm__submit}
+                            >
+                                Submit
+                            </Button>
+                        </form>
+                    </CenterSection>
+                </Container>
+            </PageWrapper>
+            <Footer />
         </>
     );
 };

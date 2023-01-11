@@ -27,7 +27,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: $spacing-4;
+        gap: $spacing-6;
     }
 
     @include sm {
@@ -79,7 +79,6 @@
         height: var(--vh);
         right: 0;
         top: 0;
-        background: var(--tertiary200);
 
         &__list {
             margin-top: 60px;

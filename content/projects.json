@@ -2,24 +2,19 @@
     "projects": [
         {
             "name": "Quizz",
-            "description": "Quizz is a real-time quizzing application. It works like Kahoot where you can host numerous players and they compete for the highest score by answering right the fastest. Features a full quiz editor, and an easy way to join quizzes.",
-            "skills": ["ExpressJS", "NextJS", "WebSockets"],
+            "description": "Quizz is a real-time quizzing application much like Kahoot. I built this project as a fun way to develop my skills using websockets. It uses a packet system for real-time communication, featuring a scoring system, quiz editor, and an easy way to join quizzes.",
+            "skills": ["Node.js", "React.js", "WebSockets", "Redux"],
             "link": "https://quizz.jaminstratford.com",
-            "source": "https://github.com/IlluzionzDev/Quizz"
+            "source": "https://github.com/IlluzionzDev/Quizz",
+            "featured": true
         },
         {
-            "name": "Quizz",
-            "description": "Quizz is a real-time quizzing application. It works like Kahoot where you can host numerous players and they compete for the highest score by answering right the fastest. Features a full quiz editor, and an easy way to join quizzes.",
-            "skills": ["ExpressJS", "NextJS", "WebSockets"],
-            "link": "https://quizz.jaminstratford.com",
-            "source": "https://github.com/IlluzionzDev/Quizz"
-        },
-        {
-            "name": "Quizz",
-            "description": "Quizz is a real-time quizzing application. It works like Kahoot where you can host numerous players and or, and an easy way to join quizzes.",
-            "skills": ["ExpressJS", "NextJS", "WebSockets"],
-            "link": "https://quizz.jaminstratford.com",
-            "source": "https://github.com/IlluzionzDev/Quizz"
+            "name": "PersonalWebsite V2",
+            "description": "This second iteration of my person website features a new design. It now uses multiple pages to split content and make it easer to manage website flow. I can now easily add new content to the site and iterate on design and features.",
+            "skills": ["Next.js", "React.js", "Framer-Motion"],
+            "link": "https://jaminstratford.com",
+            "source": "https://github.com/IlluzionzDev/PersonalWebsite",
+            "featured": true
         }
     ]
 }

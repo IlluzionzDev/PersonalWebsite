@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/link-passhref */
-import { Box } from '@design-system/layout/box';
+import { Box, BoxProps } from '@design-system/layout/box';
 import { Flex } from '@design-system/layout/flex';
+import { FlexTypes } from '@design-system/layout/flex/flex';
 import { useTheme } from '@design-system/theme';
 import Link from 'next/link';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
-export const SocialLinks = () => {
+export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
     const { theme } = useTheme();
 
     return (
@@ -16,9 +17,14 @@ export const SocialLinks = () => {
                 aria-label="GitHub"
             >
                 <Box
-                    whileHover={{
-                        color: theme.colors['tertiary700'],
+                    initial={{
+                        y: 0,
                     }}
+                    whileHover={{
+                        color: theme.colors['tertiary500'],
+                        y: -2,
+                    }}
+                    {...rest}
                 >
                     <FaGithub />
                 </Box>
@@ -29,9 +35,14 @@ export const SocialLinks = () => {
                 target="_blank"
             >
                 <Box
-                    whileHover={{
-                        color: theme.colors['tertiary700'],
+                    initial={{
+                        y: 0,
                     }}
+                    whileHover={{
+                        color: theme.colors['tertiary500'],
+                        y: -2,
+                    }}
+                    {...rest}
                 >
                     <FaLinkedin />
                 </Box>
@@ -42,9 +53,14 @@ export const SocialLinks = () => {
                 target="_blank"
             >
                 <Box
-                    whileHover={{
-                        color: theme.colors['tertiary700'],
+                    initial={{
+                        y: 0,
                     }}
+                    whileHover={{
+                        color: theme.colors['tertiary500'],
+                        y: -2,
+                    }}
+                    {...rest}
                 >
                     <FaInstagram />
                 </Box>

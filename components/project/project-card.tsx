@@ -4,6 +4,7 @@ import { Box } from '@design-system/layout/box';
 import { Body, Heading, Label } from '@design-system/typography';
 import { FaFolder, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
+import { useTheme } from '@design-system/theme';
 
 type ProjectCardProps = {
     index: number;
@@ -13,10 +14,13 @@ type ProjectCardProps = {
         skills: Array<string>;
         link: string;
         source: string;
+        featured: boolean;
     };
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
+    const { theme } = useTheme();
+
     return (
         <Flex
             paddingLeft={7}
@@ -28,6 +32,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
             direction="column"
             radius="lg"
             className={styles.projectCard}
+            initial={{
+                y: 0,
+            }}
+            whileHover={{
+                y: -5,
+            }}
         >
             <Flex direction="row" justifyContent="space-between">
                 <Box>
@@ -35,20 +45,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
                 </Box>
                 <Flex direction="row" alignItems="center" gap={3}>
                     <Link href={project.source} target="_blank">
-                        <FaGithub size={24} />
+                        <Box
+                            className={styles.github}
+                            whileHover={{
+                                color: theme.colors['tertiary500'],
+                            }}
+                        >
+                            <FaGithub size={24} />
+                        </Box>
                     </Link>
                 </Flex>
             </Flex>
             <Flex direction="column" gap={1}>
-                <Link href={project.link} target="_blank">
-                    <Heading
-                        element="h4"
-                        variant="heading-4"
-                        color="neutral900"
-                    >
+                <Heading
+                    element="h4"
+                    variant="heading-4"
+                    color="neutral900"
+                    className={styles.projectCard__title}
+                >
+                    <Link href={project.link} target="_blank">
                         {project.name}
-                    </Heading>
-                </Link>
+                    </Link>
+                </Heading>
                 <Body variant="md" color="black">
                     {project.description}
                 </Body>

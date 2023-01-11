@@ -6,11 +6,12 @@ import { FaBars } from 'react-icons/fa';
 import styles from './nav.module.scss';
 
 type NavProps = {
+    colorScheme: 'primary' | 'secondary' | 'tertiary';
     logo: ReactNode; // Main logo element
     links: ReactNode[]; // All links inc dropdown links
 };
 
-export const Nav: React.FC<NavProps> = ({ logo, links }) => {
+export const Nav: React.FC<NavProps> = ({ colorScheme, logo, links }) => {
     const [expandedNav, setExpandedNav] = useState(false);
 
     useEffect(() => {
@@ -54,6 +55,9 @@ export const Nav: React.FC<NavProps> = ({ logo, links }) => {
                         <motion.li
                             onClick={(e) => e.stopPropagation()}
                             className={styles.expandedLinks}
+                            style={{
+                                background: 'var(--' + colorScheme + '200)',
+                            }}
                             initial={{
                                 x: 500,
                             }}
