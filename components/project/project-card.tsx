@@ -82,7 +82,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
             >
                 {project.skills.map((skill, index) => {
                     return (
-                        <Label key={index} variant="md" color="primary500">
+                        <Label key={index} variant="md" color="primary600">
                             {skill}
                         </Label>
                     );
