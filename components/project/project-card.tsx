@@ -48,6 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
                         href={project.source}
                         target="_blank"
                         aria-label="Github Source Code"
+                        passHref
                     >
                         <Box
                             className={styles.github}
