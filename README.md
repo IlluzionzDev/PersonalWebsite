@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jamin Stratford Personal Website
 
-## Getting Started
+This is my personal website as an extension of my personal brand. It contains information about my current doings, some technology I'm currently using, and an archive of my projects.
 
-First, run the development server:
+An in-built blog will also be releasing so I can post technical blogs and integrate those across my social media.
 
-```bash
-npm run dev
-# or
-yarn dev
+## Tech Stack
+
+This website is built with the following technologies:
+
+-   React ([NextJS](https://nextjs.org/))
+-   Framer-Motion
+
+## Content
+
+Currently, dynamic content for the site is managed in the `/content` directory.
+
+### Skills
+
+Current skills displayed on the website are exported from a typescript file at `/content/skills.js`. It exports a simple string array.
+
+### Projects
+
+Current projects are contained in a JSON file at `/content/projects.json`. This contains all the information on the project and the website handles rendering where needed, here is the schema for the file.
+
+```json
+{
+    "projects": [
+        {
+            "name": "Project Name",
+            "description": "Project Description",
+            "skills": ["Node.js", "React.js", "WebSockets", "Redux"],
+            "link": "https://linktoproject.com",
+            "source": "https://projectcode.com",
+            "featured": true
+        }
+    ]
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   /components
+    -   Local components for this website
+-   /content
+    -   CMS content for the website
+-   /design-system
+    -   My custom design system, to be refactored to it's own npm package
+-   /pages
+    -   Website pages
+-   /public
+    -   Static website content
+-   /styles
+    -   Global website specific scss
