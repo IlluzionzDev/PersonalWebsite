@@ -44,7 +44,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
                     <FaFolder size={32} />
                 </Box>
                 <Flex direction="row" alignItems="center" gap={3}>
-                    <Link href={project.source} target="_blank">
+                    <Link
+                        href={project.source}
+                        target="_blank"
+                        aria-label="Github Source Code"
+                    >
                         <Box
                             className={styles.github}
                             whileHover={{

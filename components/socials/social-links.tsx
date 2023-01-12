@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/link-passhref */
 import { Box, BoxProps } from '@design-system/layout/box';
 import { Flex } from '@design-system/layout/flex';
-import { FlexTypes } from '@design-system/layout/flex/flex';
 import { useTheme } from '@design-system/theme';
 import Link from 'next/link';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
