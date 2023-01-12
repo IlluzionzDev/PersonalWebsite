@@ -39,6 +39,7 @@ export const Nav: React.FC<NavProps> = ({ colorScheme, logo, links }) => {
                             <button
                                 className={styles.hamburger}
                                 onClick={() => setExpandedNav((prev) => !prev)}
+                                aira-label="expand navigation menu"
                             >
                                 <FaBars />
                             </button>

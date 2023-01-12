@@ -33,6 +33,7 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
             <Link
                 href="https://www.linkedin.com/in/jaminstratford/"
                 target="_blank"
+                aria-label="LinkedIn"
             >
                 <Box
                     initial={{
@@ -51,6 +52,7 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
             <Link
                 href="https://www.instagram.com/jaminstratford/"
                 target="_blank"
+                aria-label="Instagram"
             >
                 <Box
                     initial={{
