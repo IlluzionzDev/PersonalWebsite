@@ -12,6 +12,7 @@
 
         @include lg {
             margin-left: 0 !important;
+            text-align: left !important;
         }
     }
 
@@ -19,7 +20,7 @@
         text-align: left;
 
         @include lg {
-            text-align: center !important;
+            // text-align: center !important;
         }
     }
 
@@ -35,6 +36,7 @@
 
     @include lg {
         gap: $spacing-7 !important;
+        margin-left: $spacing-4;
     }
 }
 
@@ -42,11 +44,13 @@
     @include lg {
         flex-direction: column-reverse !important;
         gap: $spacing-7 !important;
+        align-items: flex-start !important;
     }
 
     &__links {
         @include lg {
-            flex-direction: column !important;
+            flex-direction: column-reverse !important;
+            align-items: flex-start !important;
         }
     }
 }
