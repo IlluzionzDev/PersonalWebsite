@@ -25,7 +25,7 @@ export const Button: React.FC<ButtonProps> = ({
 
     if (variant === 'primary') {
         let focusStyles = {
-            background: 'var(--' + colorScheme + '500)',
+            background: theme.colors[colorScheme + '500'],
         };
 
         buttonVariantStyles = {
