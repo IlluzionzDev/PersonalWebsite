@@ -2,8 +2,7 @@ import { IconButton } from '@design-system/button';
 import React, { createContext, useContext, useState } from 'react';
 import { useEffect } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import { darkTheme } from './dark-theme';
-import { lightTheme } from './light-theme';
+import { commonTheme } from './common-theme';
 
 const defaultTheme = {
     color: 'string',
@@ -24,7 +23,7 @@ export const ThemeProvider: React.FC = ({ children }) => {
         setIsDarkTheme((prev) => !prev);
     };
 
-    // Update body theme class
+    // Update body class for css color variables
     useEffect(() => {
         if (isDarkTheme) {
             document.body.classList.add('darkTheme');
@@ -40,6 +39,7 @@ export const ThemeProvider: React.FC = ({ children }) => {
     );
 };
 
+// Theme switching component
 export const ThemeSwitcher = () => {
     const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
 
@@ -55,6 +55,6 @@ export const ThemeSwitcher = () => {
 export function useTheme() {
     const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
 
-    const theme = isDarkTheme ? darkTheme : lightTheme;
+    const theme = commonTheme;
     return { theme, toggleTheme };
 }

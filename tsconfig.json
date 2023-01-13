@@ -19,7 +19,6 @@
         "paths": {
             "@components/*": ["components/*"],
             "@design-system/*": ["design-system/*"],
-            "@styles/*": ["styles/*"],
             "@content/*": ["content/*"]
         },
         "typeRoots": ["node_modules/@types"]

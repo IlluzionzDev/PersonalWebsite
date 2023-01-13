@@ -1,5 +1,6 @@
 /**
- * Common values across all themes
+ * Contains variables used across all color themes. This way we can
+ * use them in the code, whereas colors are handled in the css variables
  */
 export const commonTheme = {
     spaces: [

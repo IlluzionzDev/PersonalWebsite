@@ -11,10 +11,6 @@
     @return $remValue;
 }
 
-@function toRGB($color) {
-    @return red($color), green($color), blue($color);
-}
-
 /**
 * Design System Constants (from JS)
 */

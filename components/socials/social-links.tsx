@@ -8,6 +8,8 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
     const { theme } = useTheme();
 
+    const colorScheme = 'tertiary';
+
     return (
         <Flex gap={4} alignItems="center">
             <Link
@@ -20,7 +22,7 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                         y: 0,
                     }}
                     whileHover={{
-                        color: theme.colors['tertiary500'],
+                        color: 'var(--' + colorScheme + '500)',
                         y: -2,
                     }}
                     {...rest}
@@ -39,7 +41,7 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                         y: 0,
                     }}
                     whileHover={{
-                        color: theme.colors['tertiary500'],
+                        color: 'var(--' + colorScheme + '500)',
                         y: -2,
                     }}
                     {...rest}
@@ -58,7 +60,7 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                         y: 0,
                     }}
                     whileHover={{
-                        color: theme.colors['tertiary500'],
+                        color: 'var(--' + colorScheme + '500)',
                         y: -2,
                     }}
                     {...rest}

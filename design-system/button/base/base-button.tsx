@@ -41,11 +41,11 @@ export const BaseButton: React.FC<BaseButtonProps> = ({
         <motion.button
             initial={{
                 background: background
-                    ? theme.colors[background]
+                    ? 'var(--' + background + ')'
                     : 'transparent',
-                color: color ? theme.colors[color] : undefined,
+                color: color ? 'var(--' + color + ')' : undefined,
                 borderColor: borderColor
-                    ? theme.colors[borderColor]
+                    ? 'var(--' + borderColor + ')'
                     : 'transparent',
                 ...initial,
             }}

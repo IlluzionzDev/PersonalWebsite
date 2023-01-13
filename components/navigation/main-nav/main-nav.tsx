@@ -15,7 +15,7 @@ export const MainNav: React.FC<MainNavProps> = ({ colorScheme }) => {
     const { theme } = useTheme();
 
     const hoverStyles = {
-        color: theme.colors[colorScheme + '500'],
+        color: 'var(--' + colorScheme + '500)',
     };
 
     return (

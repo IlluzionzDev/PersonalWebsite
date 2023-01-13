@@ -25,11 +25,11 @@ export const Button: React.FC<ButtonProps> = ({
 
     if (variant === 'primary') {
         let focusStyles = {
-            background: theme.colors[colorScheme + '500'],
+            background: 'var(--' + colorScheme + '400)',
         };
 
         buttonVariantStyles = {
-            background: colorScheme + '600',
+            background: colorScheme + '500',
             color: 'white',
             whileHover: focusStyles,
             whileFocus: focusStyles,
@@ -48,7 +48,7 @@ export const Button: React.FC<ButtonProps> = ({
         };
     } else if (variant === 'tertiary') {
         let focusStyles = {
-            background: theme.colors[colorScheme + '100'],
+            background: 'var(--' + colorScheme + '100)',
         };
 
         buttonVariantStyles = {
