@@ -123,7 +123,7 @@ const Home: NextPage = () => {
                             </Flex>
                         </Container>
                     </CenterSection>
-                    <AnimatedEffect />
+                    {/* <AnimatedEffect /> */}
                 </FullSection>
                 <Container>
                     <Box paddingTop={10} paddingBottom={10}>
