@@ -1,4 +1,4 @@
-# Jamin Stratford Personal Website
+# [Jamin Stratford Personal Website](https://www.jaminstratford.com/)
 
 This is my personal website as an extension of my personal brand. It contains information about my current doings, some technology I'm currently using, and an archive of my projects.
 

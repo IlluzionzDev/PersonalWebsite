@@ -1,5 +1,6 @@
 .footer {
     width: 100%;
+    background: var(--primary100);
 
     &__author {
         @include text-gradient;
@@ -9,17 +10,17 @@
             var(--tertiary500),
             var(--secondary700)
         );
-
-        padding-bottom: $spacing-2;
     }
 
+    // Bottom gradient
     &__decoration {
         width: 100%;
 
         background: linear-gradient(
             to right,
-            var(--tertiary500),
-            var(--secondary700)
+            var(--primary500),
+            var(--secondary500),
+            var(--tertiary500)
         );
         height: 4px;
     }

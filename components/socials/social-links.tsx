@@ -17,7 +17,7 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                 target="_blank"
                 aria-label="GitHub"
             >
-                <Box
+                <Flex
                     initial={{
                         y: 0,
                     }}
@@ -25,10 +25,12 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                         color: 'var(--' + colorScheme + '500)',
                         y: -2,
                     }}
+                    justifyContent="center"
+                    alignItems="center"
                     {...rest}
                 >
-                    <FaGithub />
-                </Box>
+                    <FaGithub size={16} />
+                </Flex>
             </Link>
 
             <Link
@@ -36,7 +38,7 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                 target="_blank"
                 aria-label="LinkedIn"
             >
-                <Box
+                <Flex
                     initial={{
                         y: 0,
                     }}
@@ -44,10 +46,12 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                         color: 'var(--' + colorScheme + '500)',
                         y: -2,
                     }}
+                    justifyContent="center"
+                    alignItems="center"
                     {...rest}
                 >
                     <FaLinkedin />
-                </Box>
+                </Flex>
             </Link>
 
             <Link
@@ -55,7 +59,7 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                 target="_blank"
                 aria-label="Instagram"
             >
-                <Box
+                <Flex
                     initial={{
                         y: 0,
                     }}
@@ -63,10 +67,12 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                         color: 'var(--' + colorScheme + '500)',
                         y: -2,
                     }}
+                    justifyContent="center"
+                    alignItems="center"
                     {...rest}
                 >
                     <FaInstagram />
-                </Box>
+                </Flex>
             </Link>
         </Flex>
     );
