@@ -4,12 +4,6 @@ import { useEffect } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { commonTheme } from './common-theme';
 
-const defaultTheme = {
-    color: 'string',
-};
-
-export type Theme = typeof defaultTheme;
-
 // Theme object
 export const ThemeContext = createContext({
     isDarkTheme: false,
@@ -57,4 +51,35 @@ export function useTheme() {
 
     const theme = commonTheme;
     return { theme, toggleTheme };
+}
+
+export type ColorValues =
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'success'
+    | 'warning'
+    | 'error'
+    | 'gray'
+    | 'neutral'
+    | 'white'
+    | 'black'
+    | undefined;
+export type ColorShades = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
+
+export function cssColorShade(color: ColorValues, shade: ColorShades) {
+    // Invalid color
+    if (!color) return 'var(--error500)';
+
+    if (color === 'black' || color === 'white') {
+        return 'var(--' + color + ')';
+    }
+
+    // Return css variable value
+    return 'var(--' + color + shade + ')';
+}
+
+export function cssColor(color: string) {
+    // Return straight css variable with color name
+    return 'var(--' + color + ')';
 }

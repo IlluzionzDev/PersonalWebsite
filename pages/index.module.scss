@@ -1,7 +1,7 @@
 .gradient__bg {
     background: linear-gradient(
         to right,
-        rgba(var(--tertiary100RGB), 0.25),
+        rgba(var(--primary100RGB), 0.25),
         rgba(var(--secondary100RGB), 0.25)
     );
 }
@@ -29,7 +29,7 @@
 
         background-image: linear-gradient(
             to right,
-            var(--tertiary500),
+            var(--primary600),
             var(--secondary700)
         );
     }

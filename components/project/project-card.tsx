@@ -4,7 +4,7 @@ import { Box } from '@design-system/layout/box';
 import { Body, Heading, Label } from '@design-system/typography';
 import { FaFolder, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
-import { useTheme } from '@design-system/theme';
+import { cssColorShade, useTheme } from '@design-system/theme';
 
 type ProjectCardProps = {
     index: number;
@@ -53,7 +53,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
                         <Box
                             className={styles.github}
                             whileHover={{
-                                color: 'var(--tertiary500)',
+                                color: cssColorShade('tertiary', 500),
                             }}
                         >
                             <FaGithub size={24} />

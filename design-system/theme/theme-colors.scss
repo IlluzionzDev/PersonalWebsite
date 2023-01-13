@@ -43,15 +43,15 @@
     @include generateVars('neutral900', #212134);
 
     // Primary
-    @include generateVars('primary100', #ebebfa);
-    @include generateVars('primary200', #c3c2ef);
-    @include generateVars('primary300', #9b9ae5);
-    @include generateVars('primary400', #7371da);
-    @include generateVars('primary500', #4b49d0);
-    @include generateVars('primary600', #322fb6);
-    @include generateVars('primary700', #27258e);
-    @include generateVars('primary800', #1c1a65);
-    @include generateVars('primary900', #11103d);
+    @include generateVars('primary100', #e2e1f6);
+    @include generateVars('primary200', #c4c4ed);
+    @include generateVars('primary300', #a7a6e3);
+    @include generateVars('primary400', #8989da);
+    @include generateVars('primary500', #6c6bd1);
+    @include generateVars('primary600', #5656a7);
+    @include generateVars('primary700', #41407d);
+    @include generateVars('primary800', #2b2b54);
+    @include generateVars('primary900', #16152a);
 
     // Secondary
     @include generateVars('secondary100', #ebeffa);
@@ -65,15 +65,15 @@
     @include generateVars('secondary900', #101d3c);
 
     // Tertiary
-    @include generateVars('tertiary100', #f0eef6);
-    @include generateVars('tertiary200', #d1cde4);
-    @include generateVars('tertiary300', #b2acd3);
-    @include generateVars('tertiary400', #948bc1);
+    @include generateVars('tertiary100', #e3e1ef);
+    @include generateVars('tertiary200', #c8c3df);
+    @include generateVars('tertiary300', #aca5cf);
+    @include generateVars('tertiary400', #9187bf);
     @include generateVars('tertiary500', #7569af);
-    @include generateVars('tertiary600', #5c5096);
-    @include generateVars('tertiary700', #473e74);
-    @include generateVars('tertiary800', #332c53);
-    @include generateVars('tertiary900', #1f1b32);
+    @include generateVars('tertiary600', #5e548c);
+    @include generateVars('tertiary700', #463f69);
+    @include generateVars('tertiary800', #2f2a46);
+    @include generateVars('tertiary900', #171523);
 
     // Success
     @include generateVars('success100', #f3faf4);

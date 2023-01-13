@@ -41,25 +41,25 @@
     border-radius: 50%;
     mix-blend-mode: multiply;
     filter: blur(100px);
-    opacity: 20%;
+    opacity: 50%;
     transition: 500ms ease-in-out;
     animation-fill-mode: forwards;
 
     &__1 {
         margin: 60% 0 45% -35%;
-        background: #2eadf6;
+        background: var(--secondary200);
         animation: cycle 3s ease-in-out infinite both;
     }
 
     &__2 {
         margin: 15% 0 0 25%;
-        background: #7a87d3;
+        background: var(--primary200);
         animation: cycle 3.7s ease-in-out infinite both;
     }
 
     &__3 {
         margin: -20% 3% 0 10%;
-        background: #d57aff;
+        background: var(--tertiary200);
         animation: cycle 5.6s ease-in-out infinite both;
     }
 }
