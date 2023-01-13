@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import styles from './animated-effect.module.scss';
 
-export const AnimatedEffect = () => {
+const AnimatedEffect = () => {
     return (
         <div className={styles.background}>
             <div className={classNames(styles.shape, styles.shape__1)} />
@@ -10,3 +10,5 @@ export const AnimatedEffect = () => {
         </div>
     );
 };
+
+export default AnimatedEffect;

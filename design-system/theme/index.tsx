@@ -2,14 +2,7 @@ import { IconButton } from '@design-system/button';
 import React, { createContext, useContext, useState } from 'react';
 import { useEffect } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import { darkTheme } from './dark-theme';
-import { lightTheme } from './light-theme';
-
-const defaultTheme = {
-    color: 'string',
-};
-
-export type Theme = typeof defaultTheme;
+import { commonTheme } from './common-theme';
 
 // Theme object
 export const ThemeContext = createContext({
@@ -24,7 +17,7 @@ export const ThemeProvider: React.FC = ({ children }) => {
         setIsDarkTheme((prev) => !prev);
     };
 
-    // Update body theme class
+    // Update body class for css color variables
     useEffect(() => {
         if (isDarkTheme) {
             document.body.classList.add('darkTheme');
@@ -40,6 +33,7 @@ export const ThemeProvider: React.FC = ({ children }) => {
     );
 };
 
+// Theme switching component
 export const ThemeSwitcher = () => {
     const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
 
@@ -55,6 +49,37 @@ export const ThemeSwitcher = () => {
 export function useTheme() {
     const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
 
-    const theme = isDarkTheme ? darkTheme : lightTheme;
+    const theme = commonTheme;
     return { theme, toggleTheme };
+}
+
+export type ColorValues =
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'success'
+    | 'warning'
+    | 'error'
+    | 'gray'
+    | 'neutral'
+    | 'white'
+    | 'black'
+    | undefined;
+export type ColorShades = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
+
+export function cssColorShade(color: ColorValues, shade: ColorShades) {
+    // Invalid color
+    if (!color) return 'var(--error500)';
+
+    if (color === 'black' || color === 'white') {
+        return 'var(--' + color + ')';
+    }
+
+    // Return css variable value
+    return 'var(--' + color + shade + ')';
+}
+
+export function cssColor(color: string) {
+    // Return straight css variable with color name
+    return 'var(--' + color + ')';
 }

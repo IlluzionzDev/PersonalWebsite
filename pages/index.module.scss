@@ -1,7 +1,7 @@
 .gradient__bg {
     background: linear-gradient(
         to right,
-        rgba(var(--tertiary100RGB), 0.25),
+        rgba(var(--primary100RGB), 0.25),
         rgba(var(--secondary100RGB), 0.25)
     );
 }
@@ -12,6 +12,7 @@
 
         @include lg {
             margin-left: 0 !important;
+            text-align: left !important;
         }
     }
 
@@ -19,7 +20,7 @@
         text-align: left;
 
         @include lg {
-            text-align: center !important;
+            // text-align: center !important;
         }
     }
 
@@ -28,13 +29,14 @@
 
         background-image: linear-gradient(
             to right,
-            var(--tertiary500),
+            var(--primary600),
             var(--secondary700)
         );
     }
 
     @include lg {
         gap: $spacing-7 !important;
+        margin-left: $spacing-4;
     }
 }
 
@@ -42,11 +44,13 @@
     @include lg {
         flex-direction: column-reverse !important;
         gap: $spacing-7 !important;
+        align-items: flex-start !important;
     }
 
     &__links {
         @include lg {
-            flex-direction: column !important;
+            flex-direction: column-reverse !important;
+            align-items: flex-start !important;
         }
     }
 }

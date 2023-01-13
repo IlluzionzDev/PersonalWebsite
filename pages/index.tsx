@@ -13,12 +13,17 @@ import { FaArrowRight } from 'react-icons/fa';
 import { MainNav } from '@components/navigation';
 import projects from '@content/projects.json';
 import ProjectCard from '@components/project/project-card';
-import { AnimatedEffect } from '@components/effect/animated-effect';
 import { useTheme } from '@design-system/theme';
 import { SocialLinks } from '@components/socials/social-links';
 import { motion, Variants } from 'framer-motion';
 import { Footer } from '@components/navigation/footer/footer';
 import { PageWrapper } from '@design-system/layout/wrapper';
+import dynamic from 'next/dynamic';
+
+const AnimatedEffect = dynamic(
+    () => import('@components/effect/animated-effect'),
+    { ssr: false }
+);
 
 const Home: NextPage = () => {
     const { theme } = useTheme();
@@ -102,7 +107,7 @@ const Home: NextPage = () => {
                                         <Link href="/about">
                                             <Button
                                                 variant="primary"
-                                                colorScheme="tertiary"
+                                                colorScheme="primary"
                                                 endIcon={
                                                     <FaArrowRight size={16} />
                                                 }

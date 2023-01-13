@@ -4,7 +4,7 @@ import { Nav } from '@design-system/navigation';
 import { Label } from '@design-system/typography';
 import Link from 'next/link';
 import { Container } from '@design-system/layout/container';
-import { useTheme } from '@design-system/theme';
+import { cssColorShade, useTheme } from '@design-system/theme';
 import { Button } from '@design-system/button';
 
 type MainNavProps = {
@@ -15,7 +15,7 @@ export const MainNav: React.FC<MainNavProps> = ({ colorScheme }) => {
     const { theme } = useTheme();
 
     const hoverStyles = {
-        color: theme.colors[colorScheme + '500'],
+        color: cssColorShade(colorScheme, 500),
     };
 
     return (
@@ -56,10 +56,14 @@ export const MainNav: React.FC<MainNavProps> = ({ colorScheme }) => {
                         Contact
                     </Label>
                 </Link>,
-                <Link key="link-resume" href="/resume.pdf">
-                    <Button variant="tertiary" colorScheme={colorScheme}>
+                <Link key="link-resume" href="/resume.pdf" target="_blank">
+                    <Label
+                        variant="button"
+                        color="black"
+                        whileHover={hoverStyles}
+                    >
                         Resume
-                    </Button>
+                    </Label>
                 </Link>,
             ]}
         />

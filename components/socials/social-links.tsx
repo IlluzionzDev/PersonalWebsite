@@ -1,13 +1,14 @@
 /* eslint-disable @next/next/link-passhref */
 import { Box, BoxProps } from '@design-system/layout/box';
 import { Flex } from '@design-system/layout/flex';
-import { FlexTypes } from '@design-system/layout/flex/flex';
 import { useTheme } from '@design-system/theme';
 import Link from 'next/link';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
     const { theme } = useTheme();
+
+    const colorScheme = 'tertiary';
 
     return (
         <Flex gap={4} alignItems="center">
@@ -16,54 +17,62 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                 target="_blank"
                 aria-label="GitHub"
             >
-                <Box
+                <Flex
                     initial={{
                         y: 0,
                     }}
                     whileHover={{
-                        color: theme.colors['tertiary500'],
+                        color: 'var(--' + colorScheme + '500)',
                         y: -2,
                     }}
+                    justifyContent="center"
+                    alignItems="center"
                     {...rest}
                 >
-                    <FaGithub />
-                </Box>
+                    <FaGithub size={16} />
+                </Flex>
             </Link>
 
             <Link
                 href="https://www.linkedin.com/in/jaminstratford/"
                 target="_blank"
+                aria-label="LinkedIn"
             >
-                <Box
+                <Flex
                     initial={{
                         y: 0,
                     }}
                     whileHover={{
-                        color: theme.colors['tertiary500'],
+                        color: 'var(--' + colorScheme + '500)',
                         y: -2,
                     }}
+                    justifyContent="center"
+                    alignItems="center"
                     {...rest}
                 >
                     <FaLinkedin />
-                </Box>
+                </Flex>
             </Link>
 
             <Link
                 href="https://www.instagram.com/jaminstratford/"
                 target="_blank"
+                aria-label="Instagram"
             >
-                <Box
+                <Flex
                     initial={{
                         y: 0,
                     }}
                     whileHover={{
-                        color: theme.colors['tertiary500'],
+                        color: 'var(--' + colorScheme + '500)',
                         y: -2,
                     }}
+                    justifyContent="center"
+                    alignItems="center"
                     {...rest}
                 >
                     <FaInstagram />
-                </Box>
+                </Flex>
             </Link>
         </Flex>
     );

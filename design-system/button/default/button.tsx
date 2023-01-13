@@ -1,4 +1,4 @@
-import { useTheme } from '@design-system/theme';
+import { ColorValues, cssColorShade, useTheme } from '@design-system/theme';
 import { CSSProperties } from 'react';
 import { BaseButton, BaseButtonProps } from '../base/base-button';
 import styles from './button.module.scss';
@@ -8,7 +8,7 @@ type ButtonVariants = 'primary' | 'secondary' | 'tertiary';
 type ButtonProps = {
     className?: CSSProperties | string;
     variant: ButtonVariants;
-    colorScheme?: string;
+    colorScheme?: ColorValues;
 } & BaseButtonProps;
 
 export const Button: React.FC<ButtonProps> = ({
@@ -25,7 +25,7 @@ export const Button: React.FC<ButtonProps> = ({
 
     if (variant === 'primary') {
         let focusStyles = {
-            background: theme.colors[colorScheme + '600'],
+            background: cssColorShade(colorScheme, 400),
         };
 
         buttonVariantStyles = {
@@ -48,7 +48,7 @@ export const Button: React.FC<ButtonProps> = ({
         };
     } else if (variant === 'tertiary') {
         let focusStyles = {
-            background: theme.colors[colorScheme + '100'],
+            background: cssColorShade(colorScheme, 100),
         };
 
         buttonVariantStyles = {

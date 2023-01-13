@@ -4,7 +4,7 @@ import { Box } from '@design-system/layout/box';
 import { Body, Heading, Label } from '@design-system/typography';
 import { FaFolder, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
-import { useTheme } from '@design-system/theme';
+import { cssColorShade, useTheme } from '@design-system/theme';
 
 type ProjectCardProps = {
     index: number;
@@ -44,11 +44,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
                     <FaFolder size={32} />
                 </Box>
                 <Flex direction="row" alignItems="center" gap={3}>
-                    <Link href={project.source} target="_blank">
+                    <Link
+                        href={project.source}
+                        target="_blank"
+                        aria-label="Github Source Code"
+                        passHref
+                    >
                         <Box
                             className={styles.github}
                             whileHover={{
-                                color: theme.colors['tertiary500'],
+                                color: cssColorShade('tertiary', 500),
                             }}
                         >
                             <FaGithub size={24} />
@@ -78,7 +83,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
             >
                 {project.skills.map((skill, index) => {
                     return (
-                        <Label key={index} variant="md" color="primary500">
+                        <Label key={index} variant="md" color="primary600">
                             {skill}
                         </Label>
                     );

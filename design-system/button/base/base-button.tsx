@@ -1,5 +1,5 @@
 import { Box } from '@design-system/layout/box';
-import { useTheme } from '@design-system/theme';
+import { cssColor, useTheme } from '@design-system/theme';
 import { Label } from '@design-system/typography';
 import classNames from 'classnames';
 import { HTMLMotionProps, motion, Target, VariantLabels } from 'framer-motion';
@@ -40,12 +40,10 @@ export const BaseButton: React.FC<BaseButtonProps> = ({
     return (
         <motion.button
             initial={{
-                background: background
-                    ? theme.colors[background]
-                    : 'transparent',
-                color: color ? theme.colors[color] : undefined,
+                background: background ? cssColor(background) : 'transparent',
+                color: color ? cssColor(color) : undefined,
                 borderColor: borderColor
-                    ? theme.colors[borderColor]
+                    ? cssColor(borderColor)
                     : 'transparent',
                 ...initial,
             }}
@@ -57,13 +55,9 @@ export const BaseButton: React.FC<BaseButtonProps> = ({
             disabled={disabled}
             aria-disabled={disabled}
             style={{
-                backgroundColor: background
-                    ? 'var(--' + background + ')'
-                    : undefined,
-                color: color ? 'var(--' + color + ')' : undefined,
-                borderColor: borderColor
-                    ? 'var(--' + borderColor + ')'
-                    : undefined,
+                backgroundColor: background ? cssColor(background) : undefined,
+                color: color ? cssColor(color) : undefined,
+                borderColor: borderColor ? cssColor(borderColor) : undefined,
                 borderRadius: radius
                     ? theme.borderRadius[radius]
                     : theme.borderRadius['sm'],
