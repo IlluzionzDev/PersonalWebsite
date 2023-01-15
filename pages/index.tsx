@@ -66,7 +66,7 @@ const Home: NextPage = () => {
                     name="description"
                     content="Jamin Stratford is a Full-Stack software developer specialising in Back-End development. Find out what I'm up to and what I've done."
                 ></meta>
-                <link rel="canonical" href="https://jaminstratford.com" />
+                <link rel="canonical" href="https://www.jaminstratford.com" />
             </Head>
             <PageWrapper>
                 <FullSection className={styles.gradient__bg}>

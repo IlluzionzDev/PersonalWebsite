@@ -2,19 +2,19 @@ function generateSiteMap() {
     return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
-       <loc>https://jaminstratford.com</loc>
+       <loc>https://www.jaminstratford.com</loc>
      </url>
      <url>
-       <loc>https://jaminstratford.com/about</loc>
+       <loc>https://www.jaminstratford.com/about</loc>
      </url>
      <url>
-       <loc>https://jaminstratford.com/projects</loc>
+       <loc>https://www.jaminstratford.com/projects</loc>
      </url>
      <url>
-       <loc>https://jaminstratford.com/contact</loc>
+       <loc>https://www.jaminstratford.com/contact</loc>
      </url>
      <url>
-       <loc>https://jaminstratford.com/resume.pdf</loc>
+       <loc>https://www.jaminstratford.com/resume.pdf</loc>
      </url>
    </urlset>
  `;

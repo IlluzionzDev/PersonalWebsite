@@ -23,7 +23,7 @@ const Projects: NextPage = () => {
                 ></meta>
                 <link
                     rel="canonical"
-                    href="https://jaminstratford.com/projects"
+                    href="https://www.jaminstratford.com/projects"
                 />
             </Head>
             <PageWrapper>

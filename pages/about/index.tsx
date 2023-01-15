@@ -28,7 +28,10 @@ const About: NextPage = () => {
                     name="description"
                     content="I'm a Full-Stack developer specialising in back-end development. I love working on new innovative projects and optimising them for flawless design and functionality"
                 ></meta>
-                <link rel="canonical" href="https://jaminstratford.com/about" />
+                <link
+                    rel="canonical"
+                    href="https://www.jaminstratford.com/about"
+                />
             </Head>
             <PageWrapper>
                 <div className={styles.pageBg}></div>

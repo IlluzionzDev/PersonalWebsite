@@ -38,7 +38,7 @@ const Projects: NextPage = () => {
                 ></meta>
                 <link
                     rel="canonical"
-                    href="https://jaminstratford.com/contact"
+                    href="https://www.jaminstratford.com/contact"
                 />
             </Head>
 
