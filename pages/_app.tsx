@@ -12,6 +12,7 @@ import '@fontsource/inter/400.css';
 import { ThemeProvider } from '@design-system/theme';
 import Head from 'next/head';
 import { useEffect } from 'react';
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }: AppProps) {
     useEffect(() => {
@@ -36,6 +37,24 @@ function MyApp({ Component, pageProps }: AppProps) {
                     content="width=device-width, initial-scale=1.0"
                 />
             </Head>
+            <Script
+                strategy="afterInteractive"
+                src="https://www.googletagmanager.com/gtag/js?id=G-4F1C1X6RJG"
+            />
+            <Script
+                id="google-analytics"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-4F1C1X6RJG', {
+                            page_path: window.location.pathname,
+                            });
+                            `,
+                }}
+            />
             <Component {...pageProps} />
         </ThemeProvider>
     );
