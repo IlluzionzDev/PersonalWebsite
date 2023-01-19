@@ -1,4 +1,3 @@
-import { Flex } from '@design-system/layout/flex';
 import classNames from 'classnames';
 import { HTMLMotionProps } from 'framer-motion';
 import { CSSProperties } from 'react';
@@ -7,7 +6,8 @@ import { FieldError } from '../error/field-error';
 import { FieldLabel } from '../label/field-label';
 import styles from './text-area-field.module.scss';
 import { useField } from '../field-context';
-import { TextArea } from '@design-system/input/text-area';
+import { TextArea } from '../../input/text-area';
+import { Flex } from '../../layout/flex';
 
 type FieldAreaInputProps = {
     required?: boolean;

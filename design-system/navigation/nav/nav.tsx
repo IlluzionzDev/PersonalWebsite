@@ -1,8 +1,7 @@
-import { Box } from '@design-system/layout/box';
-import { Container } from '@design-system/layout/container';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ReactNode, useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
+import { Container } from '../../layout/container';
 import styles from './nav.module.scss';
 
 type NavProps = {

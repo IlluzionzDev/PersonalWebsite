@@ -1,6 +1,6 @@
-import { useTheme } from '@design-system/theme';
 import { HTMLMotionProps, motion } from 'framer-motion';
 import { CSSProperties } from 'react';
+import { useTheme } from '../../theme';
 
 // Allow css rules
 export type BoxProps = {

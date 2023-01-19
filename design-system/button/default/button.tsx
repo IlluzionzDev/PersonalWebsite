@@ -1,5 +1,5 @@
-import { ColorValues, cssColorShade, useTheme } from '@design-system/theme';
 import { CSSProperties } from 'react';
+import { ColorValues, cssColorShade, useTheme } from '../../theme';
 import { BaseButton, BaseButtonProps } from '../base/base-button';
 import styles from './button.module.scss';
 

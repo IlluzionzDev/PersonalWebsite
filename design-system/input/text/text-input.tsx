@@ -1,6 +1,6 @@
-import { useField } from '@design-system/field/field-context';
 import classNames from 'classnames';
 import { ChangeEventHandler, CSSProperties } from 'react';
+import { useField } from '../../field/field-context';
 import styles from './text-input.module.scss';
 
 type TextInputProps = {

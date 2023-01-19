@@ -1,4 +1,4 @@
-import { Box } from '@design-system/layout/box';
+import { Box } from '../../layout/box';
 import styles from './modal-body.module.scss';
 
 export const ModalBody: React.FC = ({ children }) => {

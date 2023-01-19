@@ -1,5 +1,5 @@
-import { useTheme } from '@design-system/theme';
-import { Box, BoxProps } from '@design-system/layout/box';
+import { useTheme } from '../../theme';
+import { Box, BoxProps } from '../box';
 
 export type FlexTypes = {
     alignItems?: string;

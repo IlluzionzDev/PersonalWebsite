@@ -1,4 +1,3 @@
-import { useTheme } from '@design-system/theme';
 import classNames from 'classnames';
 import { HTMLMotionProps, motion, MotionStyle } from 'framer-motion';
 import { CSSProperties } from 'react';

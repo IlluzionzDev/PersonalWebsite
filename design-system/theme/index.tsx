@@ -1,7 +1,7 @@
-import { IconButton } from '@design-system/button';
 import React, { createContext, useContext, useState } from 'react';
 import { useEffect } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
+import { IconButton } from '../button';
 import { commonTheme } from './common-theme';
 
 // Theme object
@@ -11,10 +11,11 @@ export const ThemeContext = createContext({
 });
 
 export const ThemeProvider: React.FC = ({ children }) => {
-    const [isDarkTheme, setIsDarkTheme] = useState(false);
+    // const [isDarkTheme, setIsDarkTheme] = useState(false);
+    const isDarkTheme = false;
 
     const toggleTheme = (): void => {
-        setIsDarkTheme((prev) => !prev);
+        // setIsDarkTheme((prev) => !prev);
     };
 
     // Update body class for css color variables
@@ -27,7 +28,9 @@ export const ThemeProvider: React.FC = ({ children }) => {
     }, [isDarkTheme]);
 
     return (
-        <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
+        <ThemeContext.Provider
+            value={{ isDarkTheme: false, toggleTheme: () => {} }}
+        >
             {children}
         </ThemeContext.Provider>
     );

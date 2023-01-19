@@ -1,7 +1,7 @@
-import { IconButton } from '@design-system/button';
-import { Box } from '@design-system/layout/box';
-import { Flex } from '@design-system/layout/flex';
 import { FaTimes } from 'react-icons/fa';
+import { IconButton } from '../../button';
+import { Box } from '../../layout/box';
+import { Flex } from '../../layout/flex';
 import { useModal } from '../context/modal-context';
 import styles from './modal-header.module.scss';
 

@@ -1,6 +1,6 @@
-import { Box } from '@design-system/layout/box';
-import { Flex } from '@design-system/layout/flex';
 import { ReactNode } from 'react';
+import { Box } from '../../layout/box';
+import { Flex } from '../../layout/flex';
 import styles from './modal-footer.module.scss';
 
 type ModalFooterType = {

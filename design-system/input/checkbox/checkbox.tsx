@@ -1,6 +1,6 @@
-import { Flex } from '@design-system/layout/flex';
 import { ChangeEventHandler, useRef } from 'react';
 import { FaCheck } from 'react-icons/fa';
+import { Flex } from '../../layout/flex';
 import styles from './checkbox.module.scss';
 
 type CheckboxInputProps = {

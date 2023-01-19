@@ -1,7 +1,7 @@
-import { useTheme } from '@design-system/theme';
 import classNames from 'classnames';
 import { HTMLMotionProps, motion } from 'framer-motion';
 import { CSSProperties } from 'react';
+import { useTheme } from '../../theme';
 import styles from './label.module.scss';
 
 type LabelProps = {

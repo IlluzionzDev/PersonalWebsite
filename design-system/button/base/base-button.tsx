@@ -1,9 +1,9 @@
-import { Box } from '@design-system/layout/box';
-import { cssColor, useTheme } from '@design-system/theme';
-import { Label } from '@design-system/typography';
 import classNames from 'classnames';
 import { HTMLMotionProps, motion, Target, VariantLabels } from 'framer-motion';
 import { CSSProperties, ReactNode } from 'react';
+import { Box } from '../../layout/box';
+import { cssColor, useTheme } from '../../theme';
+import { Label } from '../../typography';
 import styles from './base-button.module.scss';
 
 export type BaseButtonProps = {

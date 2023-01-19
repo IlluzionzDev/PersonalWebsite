@@ -1,4 +1,3 @@
-import { Flex } from '@design-system/layout/flex';
 import classNames from 'classnames';
 import { HTMLMotionProps } from 'framer-motion';
 import { CSSProperties } from 'react';
@@ -6,8 +5,9 @@ import { Field } from '../field/field';
 import { FieldError } from '../error/field-error';
 import { FieldLabel } from '../label/field-label';
 import styles from './text-field.module.scss';
-import { TextInput } from '@design-system/input/text';
 import { useField } from '../field-context';
+import { TextInput } from '../../input/text';
+import { Flex } from '../../layout/flex';
 
 type FieldInputProps = {
     required?: boolean;

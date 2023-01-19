@@ -1,7 +1,7 @@
-import { Portal } from '@design-system/layout/portal';
 import { DismissableLayer } from '../dismissable-layer';
 import { ModalContext } from '../context/modal-context';
 import styles from './modal-layout.module.scss';
+import { Portal } from '../../layout/portal';
 
 type ModalLayoutProps = {
     onClose: () => void;

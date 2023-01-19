@@ -1,9 +1,8 @@
-import { Box } from '@design-system/layout/box';
-import { useTheme } from '@design-system/theme';
-import { Label } from '@design-system/typography';
 import classNames from 'classnames';
 import { HTMLMotionProps, motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import { Box } from '../../layout/box';
+import { useTheme } from '../../theme';
 import styles from './icon-button.module.scss';
 
 type ButtonProps = {

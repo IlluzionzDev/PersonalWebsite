@@ -1,5 +1,5 @@
-import { Box, BoxProps } from '@design-system/layout/box';
 import classNames from 'classnames';
+import { Box, BoxProps } from '../layout/box';
 import styles from './badge.module.scss';
 
 type BadgeProps = {

@@ -1,4 +1,3 @@
-import { useTheme } from '@design-system/theme';
 import classNames from 'classnames';
 import { HTMLMotionProps, motion } from 'framer-motion';
 import { CSSProperties } from 'react';
@@ -19,8 +18,6 @@ export const Body: React.FC<BodyProps> = ({
     highlight = false,
     ...rest
 }) => {
-    const { theme, toggleTheme } = useTheme();
-
     // Define styling
     const stylingName = 'body-' + variant + (highlight ? '-highlight' : '');
     const colors = {

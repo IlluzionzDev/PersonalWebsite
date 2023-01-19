@@ -1,9 +1,9 @@
-import { Box } from '@design-system/layout/box';
-import { useTheme } from '@design-system/theme';
-import { Label } from '@design-system/typography';
 import classNames from 'classnames';
 import { HTMLMotionProps, motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import { Box } from '../../layout/box';
+import { useTheme } from '../../theme';
+import { Label } from '../../typography';
 import styles from './text-button.module.scss';
 
 type ButtonProps = {

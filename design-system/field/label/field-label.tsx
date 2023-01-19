@@ -1,4 +1,4 @@
-import { Label } from '@design-system/typography';
+import { Label } from '../../typography';
 
 /**
  * Label describing a field
