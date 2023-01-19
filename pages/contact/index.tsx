@@ -1,23 +1,21 @@
 /* eslint-disable @next/next/link-passhref */
-import styles from './contact.module.scss';
-import { Box } from '@design-system/layout/box';
 import { MainNav } from '@components/navigation';
+import { Footer } from '@components/navigation/footer/footer';
 import { SectionHeader } from '@components/section';
-import { Container } from '@design-system/layout/container';
-import { Flex } from '@design-system/layout/flex';
-import { CenterSection } from '@design-system/layout/section';
+import { SocialLinks } from '@components/socials/social-links';
+import {
+    Button,
+    CenterSection,
+    Container,
+    PageWrapper,
+    TextAreaField,
+    TextField,
+    useTheme,
+} from '@illuzionz-studios/design-system';
 import { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { TextField } from '@design-system/field';
 import { useState } from 'react';
-import { TextAreaField } from '@design-system/field/text-area/text-area-field';
-import { Button } from '@design-system/button';
-import { useTheme } from '@design-system/theme';
-import { SocialLinks } from '@components/socials/social-links';
-import { PageWrapper } from '@design-system/layout/wrapper';
-import { Footer } from '@components/navigation/footer/footer';
+import styles from './contact.module.scss';
 
 const Projects: NextPage = () => {
     const { theme, toggleTheme } = useTheme();

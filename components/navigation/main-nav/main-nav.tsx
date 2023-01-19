@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/link-passhref */
-import styles from './main-nav.module.scss';
-import { Nav } from '@design-system/navigation';
-import { Label } from '@design-system/typography';
+import {
+    cssColorShade,
+    Label,
+    Nav,
+    useTheme,
+} from '@illuzionz-studios/design-system';
 import Link from 'next/link';
-import { Container } from '@design-system/layout/container';
-import { cssColorShade, useTheme } from '@design-system/theme';
-import { Button } from '@design-system/button';
+import styles from './main-nav.module.scss';
 
 type MainNavProps = {
     colorScheme: 'primary' | 'secondary' | 'tertiary';

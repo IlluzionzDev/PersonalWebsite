@@ -1,20 +1,23 @@
 import { MainNav } from '@components/navigation';
-import { SectionHeader } from '@components/section';
-import { Container } from '@design-system/layout/container';
-import { Flex } from '@design-system/layout/flex';
-import { CenterSection } from '@design-system/layout/section';
-import { Body, Heading } from '@design-system/typography';
-import { NextPage } from 'next';
-import Image from 'next/image';
-import Head from 'next/head';
-import styles from './about.module.scss';
-import { Box } from '@design-system/layout/box';
-import skills from '@content/skills';
-import { Badge } from '@design-system/badge';
-import { useTheme } from '@design-system/theme';
-import { useRouter } from 'next/router';
-import { PageWrapper } from '@design-system/layout/wrapper';
 import { Footer } from '@components/navigation/footer/footer';
+import { SectionHeader } from '@components/section';
+import skills from '@content/skills';
+import {
+    Badge,
+    Body,
+    Box,
+    CenterSection,
+    Container,
+    Flex,
+    Heading,
+    PageWrapper,
+    useTheme,
+} from '@illuzionz-studios/design-system';
+import { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import styles from './about.module.scss';
 
 const About: NextPage = () => {
     const { theme, toggleTheme } = useTheme();

@@ -1,16 +1,17 @@
-import styles from './projects.module.scss';
 import { MainNav } from '@components/navigation';
-import { SectionHeader } from '@components/section';
-import { Container } from '@design-system/layout/container';
-import { Flex } from '@design-system/layout/flex';
-import { CenterSection, FullSection } from '@design-system/layout/section';
-import { NextPage } from 'next';
-import Image from 'next/image';
-import Head from 'next/head';
-import ProjectCard from '@components/project/project-card';
-import projects from '@content/projects.json';
 import { Footer } from '@components/navigation/footer/footer';
-import { PageWrapper } from '@design-system/layout/wrapper';
+import ProjectCard from '@components/project/project-card';
+import { SectionHeader } from '@components/section';
+import projects from '@content/projects.json';
+import {
+    CenterSection,
+    Container,
+    Flex,
+    PageWrapper,
+} from '@illuzionz-studios/design-system';
+import { NextPage } from 'next';
+import Head from 'next/head';
+import styles from './projects.module.scss';
 
 const Projects: NextPage = () => {
     return (

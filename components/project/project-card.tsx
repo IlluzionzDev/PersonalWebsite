@@ -1,10 +1,15 @@
-import styles from './project-card.module.scss';
-import { Flex } from '@design-system/layout/flex';
-import { Box } from '@design-system/layout/box';
-import { Body, Heading, Label } from '@design-system/typography';
-import { FaFolder, FaGithub } from 'react-icons/fa';
+import {
+    Body,
+    Box,
+    cssColorShade,
+    Flex,
+    Heading,
+    Label,
+    useTheme,
+} from '@illuzionz-studios/design-system';
 import Link from 'next/link';
-import { cssColorShade, useTheme } from '@design-system/theme';
+import { FaFolder, FaGithub } from 'react-icons/fa';
+import styles from './project-card.module.scss';
 
 type ProjectCardProps = {
     index: number;

@@ -1,6 +1,5 @@
 import { SocialLinks } from '@components/socials/social-links';
-import { Flex } from '@design-system/layout/flex';
-import { Label } from '@design-system/typography';
+import { Flex, Label } from '@illuzionz-studios/design-system';
 import Link from 'next/link';
 import styles from './footer.module.scss';
 

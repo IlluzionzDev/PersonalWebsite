@@ -1,24 +1,29 @@
 /* eslint-disable @next/next/link-passhref */
-import styles from './index.module.scss';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { CenterSection, FullSection } from '@design-system/layout/section';
-import { Container } from '@design-system/layout/container';
-import { Heading, Label } from '@design-system/typography';
-import Link from 'next/link';
-import { Box } from '@design-system/layout/box';
-import { Flex } from '@design-system/layout/flex';
-import { Button, TextButton } from '@design-system/button';
-import { FaArrowRight } from 'react-icons/fa';
 import { MainNav } from '@components/navigation';
-import projects from '@content/projects.json';
-import ProjectCard from '@components/project/project-card';
-import { useTheme } from '@design-system/theme';
-import { SocialLinks } from '@components/socials/social-links';
-import { motion, Variants } from 'framer-motion';
 import { Footer } from '@components/navigation/footer/footer';
-import { PageWrapper } from '@design-system/layout/wrapper';
+import ProjectCard from '@components/project/project-card';
+import { SocialLinks } from '@components/socials/social-links';
+import projects from '@content/projects.json';
+import {
+    Box,
+    Button,
+    CenterSection,
+    Container,
+    Flex,
+    FullSection,
+    Heading,
+    Label,
+    PageWrapper,
+    TextButton,
+    useTheme,
+} from '@illuzionz-studios/design-system';
+import { motion, Variants } from 'framer-motion';
+import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import Link from 'next/link';
+import { FaArrowRight } from 'react-icons/fa';
+import styles from './index.module.scss';
 
 const AnimatedEffect = dynamic(
     () => import('@components/effect/animated-effect'),

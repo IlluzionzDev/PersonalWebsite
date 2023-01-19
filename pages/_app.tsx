@@ -3,16 +3,16 @@ import '@design-system/design-system.scss';
 import type { AppProps } from 'next/app';
 
 // Font stlying
-import '@fontsource/poppins/700.css';
-import '@fontsource/poppins/600.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/400.css';
-import '@fontsource/inter/700.css';
 import '@fontsource/inter/400.css';
-import { ThemeProvider } from '@design-system/theme';
+import '@fontsource/inter/700.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import { ThemeProvider } from '@illuzionz-studios/design-system';
 import Head from 'next/head';
-import { useEffect } from 'react';
 import Script from 'next/script';
+import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
     useEffect(() => {
