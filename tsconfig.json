@@ -18,7 +18,6 @@
         "baseUrl": ".",
         "paths": {
             "@components/*": ["components/*"],
-            "@design-system/*": ["design-system/*"],
             "@content/*": ["content/*"]
         },
         "typeRoots": ["node_modules/@types"]

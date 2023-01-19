@@ -1,5 +1,4 @@
-import { Flex } from '@design-system/layout/flex';
-import { Heading, Label } from '@design-system/typography';
+import { Flex, Heading, Label } from '@illuzionz-studios/design-system';
 
 type SectionHeaderProps = {
     color: string;

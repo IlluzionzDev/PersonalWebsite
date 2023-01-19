@@ -2,7 +2,7 @@ const nextConfig = {
     reactStrictMode: true,
     sassOptions: {
         includePaths: ['./styles', './components'],
-        prependData: `@import "@design-system/design-system-utils.scss";`,
+        prependData: `@import "@illuzionz-studios/design-system/style-utils";`,
     },
     i18n: {
         locales: ['en'],
