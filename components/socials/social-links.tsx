@@ -27,7 +27,7 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                     alignItems="center"
                     {...rest}
                 >
-                    <FaGithub size={16} />
+                    <FaGithub />
                 </Flex>
             </Link>
 
