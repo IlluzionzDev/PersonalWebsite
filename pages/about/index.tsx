@@ -29,7 +29,7 @@ const About: NextPage = () => {
                 <title>Jamin Stratford | About Jamin Stratford</title>
                 <meta
                     name="description"
-                    content="I'm a Full-Stack developer specialising in back-end development. I love working on new innovative projects and optimising them for flawless design and functionality"
+                    content="I'm a Full-Stack Software Engineer. I love working on new innovative projects and optimising them for flawless design and functionality"
                 ></meta>
                 <link
                     rel="canonical"
@@ -44,27 +44,22 @@ const About: NextPage = () => {
                         <SectionHeader
                             color="secondary"
                             title="About Me"
-                            heading="Who is Jamin Stratford?"
+                            heading="Jamin Stratford"
                             subHeading="Get to know a bit about my backstory and what I'm up to"
                         />
                     </Container>
                 </CenterSection>
 
                 <Container>
-                    <Flex direction="column" gap={2}>
-                        <Heading
-                            element="h3"
-                            variant="heading-3"
-                            color="secondary900"
-                            className={styles.backgroundSection__header}
-                        >
-                            Background
-                        </Heading>
-                        <Flex
-                            direction="row"
-                            justifyContent="space-between"
-                            className={styles.backgroundSection}
-                        >
+                    <Flex direction="column" gap={11} marginBottom={11}>
+                        <Flex direction="column" gap={5}>
+                            <Heading
+                                element="h3"
+                                variant="heading-2"
+                                color="secondary900"
+                            >
+                                Background
+                            </Heading>
                             <Flex
                                 direction="column"
                                 className={styles.backgroundInfo}
@@ -72,26 +67,49 @@ const About: NextPage = () => {
                                 color="neutral800"
                             >
                                 <Body variant="xl">
-                                    I&apos;m a{' '}
-                                    <span>Full-Stack developer </span>
-                                    specialising in
-                                    <span> back-end development</span>. I love
-                                    working on new innovative projects and
-                                    optimising them for flawless design and
-                                    functionality. I&apos;ve been in the
-                                    industry for many years and have developed
-                                    numerous technical skills allowing me to
-                                    turn my endless creative ideas into reality.
+                                    Hi, I&apos;m <span>Jamin Stratford </span>.
+                                    I&apos;m a
+                                    <span> full-stack software engineer </span>
+                                    with a passion for building
+                                    <span> engaging </span>and
+                                    <span> scalable innovative </span>projects.
                                 </Body>
                                 <Body variant="xl">
-                                    Fast-forward to today, I&apos;m hacking
-                                    together useful and futuristic web
-                                    experiences using a modern JavaScript stack.
+                                    I&apos;ve been in the industry for many
+                                    years and have developed numerous technical
+                                    skills allowing me to turn my endless
+                                    <span> creative ideas into reality</span>.
                                 </Body>
                                 <Body variant="xl">
-                                    Here are some of the
-                                    <span> current technologies</span> I am
-                                    using:
+                                    I enjoy the process of
+                                    <span> turning an idea </span>into a
+                                    <span> tangible product </span> and am
+                                    always striving to improve my skills and
+                                    stay up-to-date with the latest software
+                                    engineering trends.
+                                </Body>
+                            </Flex>
+                        </Flex>
+
+                        <Flex direction="column" gap={5}>
+                            <Heading
+                                element="h3"
+                                variant="heading-2"
+                                color="secondary900"
+                            >
+                                Skills
+                            </Heading>
+                            <Flex
+                                direction="column"
+                                className={styles.backgroundInfo}
+                                gap={4}
+                                color="neutral800"
+                            >
+                                <Body variant="xl">
+                                    Over the years I have been exposed to many
+                                    technologies and had the chance to play
+                                    around with them and build cool stuff. Here
+                                    are some of my favourites that I use today.
                                 </Body>
                                 <Flex
                                     direction="row"
@@ -108,16 +126,6 @@ const About: NextPage = () => {
                                         );
                                     })}
                                 </Flex>
-                            </Flex>
-                            <Flex className={styles.backgroundProfile}>
-                                <Box className={styles.imageContainer}>
-                                    <Image
-                                        src="/jamin-stratford.webp"
-                                        alt="Jamin Stratford Profile Picture"
-                                        fill
-                                        className={styles.image}
-                                    />
-                                </Box>
                             </Flex>
                         </Flex>
                     </Flex>

@@ -4,11 +4,11 @@
     }
 
     33% {
-        transform: translate(5%, 7%) scale(1.05);
+        transform: translate(7%, 9%) scale(1.1);
     }
 
     66% {
-        transform: translate(-5%, 5%) scale(0.95);
+        transform: translate(-7%, 7%) scale(0.9);
     }
 
     100% {
@@ -35,31 +35,31 @@
 // Custom moving background shape
 .shape {
     position: absolute;
-    width: 50%;
-    height: 60%;
+    width: 70%;
+    height: 80%;
     background: var(--primary100);
     border-radius: 50%;
     mix-blend-mode: multiply;
     filter: blur(100px);
-    opacity: 50%;
+    opacity: 23%;
     transition: 500ms ease-in-out;
     animation-fill-mode: forwards;
 
     &__1 {
         margin: 60% 0 45% -35%;
-        background: var(--secondary200);
+        background: #2eaef6;
         animation: cycle 3s ease-in-out infinite both;
     }
 
     &__2 {
         margin: 15% 0 0 25%;
-        background: var(--primary200);
+        background: #7a88d3;
         animation: cycle 3.7s ease-in-out infinite both;
     }
 
     &__3 {
         margin: -20% 3% 0 10%;
-        background: var(--tertiary200);
+        background: #d47aff;
         animation: cycle 5.6s ease-in-out infinite both;
     }
 }
