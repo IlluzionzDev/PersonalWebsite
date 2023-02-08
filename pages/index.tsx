@@ -69,7 +69,7 @@ const Home: NextPage = () => {
                 <title>Jamin Stratford | Full-Stack Software Engineer</title>
                 <meta
                     name="description"
-                    content="Jamin Stratford is a Full-Stack software developer specialising in Back-End development. Find out what I'm up to and what I've done."
+                    content="Jamin Stratford is a Full-Stack Software Engineer. Find out what I'm up to and what I've done."
                 ></meta>
                 <link rel="canonical" href="https://www.jaminstratford.com" />
             </Head>
@@ -89,7 +89,9 @@ const Home: NextPage = () => {
                                         variant="hero"
                                         color="black"
                                     >
-                                        <motion.span>Next-Gen</motion.span>
+                                        <motion.span>
+                                            Jamin Stratford,
+                                        </motion.span>
                                         <br />
                                         <motion.span
                                             className={styles.hero__highlight}
@@ -117,7 +119,7 @@ const Home: NextPage = () => {
                                                     <FaArrowRight size={16} />
                                                 }
                                             >
-                                                Find Out More
+                                                About Me
                                             </Button>
                                         </Link>
                                         <SocialLinks />
