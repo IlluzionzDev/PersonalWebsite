@@ -135,7 +135,7 @@ const Home: NextPage = () => {
                             </Flex>
                         </Container>
                     </CenterSection>
-                    <AnimatedEffect />
+                    {/* <AnimatedEffect /> */}
                 </FullSection>
                 <Container>
                     <Box paddingTop={10} paddingBottom={10}>
@@ -147,7 +147,7 @@ const Home: NextPage = () => {
                             >
                                 Featured Projects
                             </Heading>
-                            <Label variant="xl" color="primary800">
+                            <Label variant="xl" color="gray800">
                                 Take a look at some of my favourite projects
                                 I&apos;ve created
                             </Label>
