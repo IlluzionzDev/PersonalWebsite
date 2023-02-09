@@ -67,7 +67,7 @@ const About: NextPage = () => {
                                 color="neutral800"
                             >
                                 <Body variant="xl">
-                                    Hi, I&apos;m <span>Jamin Stratford </span>.
+                                    Hi, I&apos;m <span>Jamin Stratford</span>.
                                     I&apos;m a
                                     <span> full-stack software engineer </span>
                                     with a passion for building
