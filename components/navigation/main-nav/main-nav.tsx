@@ -57,15 +57,6 @@ export const MainNav: React.FC<MainNavProps> = ({ colorScheme }) => {
                         Contact
                     </Label>
                 </Link>,
-                <Link key="link-resume" href="/resume.pdf" target="_blank">
-                    <Label
-                        variant="button"
-                        color="black"
-                        whileHover={hoverStyles}
-                    >
-                        Resume
-                    </Label>
-                </Link>,
             ]}
         />
     );
