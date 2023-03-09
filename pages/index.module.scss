@@ -1,6 +1,9 @@
 @keyframes move-bg {
-    to {
+    from {
         background-position: var(--bg-size) 0;
+    }
+    to {
+        background-position: var(--bg-size) 400;
     }
 }
 
@@ -24,10 +27,6 @@
 
     h1 {
         text-align: left;
-
-        @include lg {
-            // text-align: center !important;
-        }
     }
 
     &__highlight {

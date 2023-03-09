@@ -39,16 +39,6 @@ export const Footer = () => {
                             Contact
                         </Label>
                     </Link>
-
-                    <Link
-                        key="footer-link-resume"
-                        href="/resume.pdf"
-                        target="_blank"
-                    >
-                        <Label variant="button" color="primary700">
-                            Resume
-                        </Label>
-                    </Link>
                 </Flex>
 
                 <Label variant="md" className={styles.footer__author}>

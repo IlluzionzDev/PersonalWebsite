@@ -2,6 +2,7 @@
 const skills = [
     'Java',
     'Kotlin',
+    'SpigotAPI & NMS',
     'JavaScript',
     'TypeScript',
     'Python',
