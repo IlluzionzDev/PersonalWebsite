@@ -120,7 +120,10 @@ const About: NextPage = () => {
                                 >
                                     {skills.map((skill, index) => {
                                         return (
-                                            <Badge key={index} variant="active">
+                                            <Badge
+                                                key={index}
+                                                variant="primary"
+                                            >
                                                 {skill}
                                             </Badge>
                                         );

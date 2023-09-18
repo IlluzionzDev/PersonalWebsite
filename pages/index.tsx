@@ -114,7 +114,6 @@ const Home: NextPage = () => {
                                         <Link href="/about">
                                             <Button
                                                 variant="primary"
-                                                colorScheme="primary"
                                                 endIcon={
                                                     <FaArrowRight size={16} />
                                                 }

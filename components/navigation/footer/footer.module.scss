@@ -7,7 +7,7 @@
 
         background-image: linear-gradient(
             to right,
-            var(--tertiary500),
+            var(--primary500),
             var(--secondary700)
         );
     }
@@ -19,8 +19,7 @@
         background: linear-gradient(
             to right,
             var(--primary500),
-            var(--secondary500),
-            var(--tertiary500)
+            var(--secondary500)
         );
         height: 4px;
     }

@@ -17,27 +17,11 @@
             "featured": true
         },
         {
-            "name": "Custom Fishing Minecraft Plugin",
-            "description": "Custom Fishing is a Minecraft server addon that allows players to fish up a customized pool of rewards greater than that of regular Minecraft. It allows for extensive customization and effects that play on a successfull catch, along with the ability to setup certain fishing zones with increased chances for certain rewards!",
-            "skills": ["SpigotAPI", "Java", "Kotlin"],
+            "name": "Illuzionz Studios Design System",
+            "description": "This is a React based design system that allows you to use skeleton components to easily and consistently build UIs. Built on styled-compoonents, it makes it very easy to customise and use.",
+            "skills": ["React.js", "Vite", "styled-components"],
             "link": "https://www.spigotmc.org/resources/53634/",
             "source": "https://github.com/IlluzionzDev/CustomFishing",
-            "featured": false
-        },
-        {
-            "name": "Custom Tab Minecraft Plugin",
-            "description": "Custom Tab is a Minecraft server addon that reinvents the player list system that is normally used to just show online players. It allows you to display custom headings and footers on the list, while also allowing you to edit the list itself. You can display custom information in certain columns and sections in the player list and pull data from countless other minecraft plugins.",
-            "skills": ["SpigotAPI", "Java", "Kotlin"],
-            "link": "https://www.spigotmc.org/resources/78200",
-            "source": "https://github.com/IlluzionzDev/CustomTab",
-            "featured": false
-        },
-        {
-            "name": "Mist Plugin Development Library",
-            "description": "Mist is a Kotlin Development Library used to quickly and easily create Minecraft Plugins. It contains many useful helper classes for common tasks and plugin infrastructure to quickly plug and play plugins together. Contains systems for things like localisation, configuration managment, async task handling, and much more!",
-            "skills": ["SpigotAPI", "NMS", "Java", "Kotlin"],
-            "link": "https://github.com/IlluzionzDev/Mist",
-            "source": "https://github.com/IlluzionzDev/Mist",
             "featured": false
         }
     ]
