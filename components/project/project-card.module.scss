@@ -3,6 +3,13 @@
     flex: 45%;
     cursor: pointer;
     position: relative;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        background-color: var(--primary200);
+
+        transform: translateY(-4px);
+    }
 
     @include md {
         flex: 0 0 100%;

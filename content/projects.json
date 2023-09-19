@@ -10,19 +10,19 @@
         },
         {
             "name": "PersonalWebsite V2",
-            "description": "This second iteration of my person website features a new design. It now uses multiple pages to split content and make it easer to manage website flow. I can now easily add new content to the site and iterate on design and features.",
+            "description": "This second iteration of my personal website features a new design. It now uses multiple pages to split content and make it easer to manage website flow. I can now easily add new content to the site and iterate on design and features.",
             "skills": ["Next.js", "React.js", "Framer-Motion"],
             "link": "https://jaminstratford.com",
             "source": "https://github.com/IlluzionzDev/PersonalWebsite",
-            "featured": true
+            "featured": false
         },
         {
             "name": "Illuzionz Studios Design System",
-            "description": "This is a React based design system that allows you to use skeleton components to easily and consistently build UIs. Built on styled-compoonents, it makes it very easy to customise and use.",
+            "description": "This is a React based design system that allows you to use skeleton components to easily and consistently build UIs. Built on styled-components, it makes it very easy to customise and use.",
             "skills": ["React.js", "Vite", "styled-components"],
             "link": "https://www.spigotmc.org/resources/53634/",
             "source": "https://github.com/IlluzionzDev/CustomFishing",
-            "featured": false
+            "featured": true
         }
     ]
 }
