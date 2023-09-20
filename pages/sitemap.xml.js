@@ -5,16 +5,7 @@ function generateSiteMap() {
        <loc>https://www.jaminstratford.com</loc>
      </url>
      <url>
-       <loc>https://www.jaminstratford.com/about</loc>
-     </url>
-     <url>
        <loc>https://www.jaminstratford.com/projects</loc>
-     </url>
-     <url>
-       <loc>https://www.jaminstratford.com/contact</loc>
-     </url>
-     <url>
-       <loc>https://www.jaminstratford.com/resume.pdf</loc>
      </url>
    </urlset>
  `;

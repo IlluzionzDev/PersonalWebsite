@@ -38,7 +38,7 @@ const AboutCard: React.FC<PropsWithChildren<AboutCardProps>> = ({
 
 export const About: React.FC = () => (
     <Container id="about">
-        <Box paddingBottom={10}>
+        <Box paddingTop={11} paddingBottom={10}>
             <Box className={styles.projectTitle}>
                 <Heading element="h2" variant="heading-1" color="black">
                     About

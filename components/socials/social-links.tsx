@@ -8,8 +8,12 @@ const SocialWrapper = styled(Flex).attrs({
     justifyContent: 'center',
     alignItems: 'center',
 })`
+    transition: 0.25s ease-in-out;
+
     &:hover {
         color: var(--primary500);
+
+        transform: translateY(-2px);
     }
 `;
 

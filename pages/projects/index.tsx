@@ -17,7 +17,7 @@ const Projects: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Jamin Stratford | Projects I Have Built</title>
+                <title>Jamin Stratford | Projects</title>
                 <meta
                     name="description"
                     content="See what innovative projects Jamin Stratford has created. I'm always designing and developing new stuff so this is constantly updated."

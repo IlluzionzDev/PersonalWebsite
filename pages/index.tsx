@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/link-passhref */
 import { MainNav } from '@components/navigation';
 import { Footer } from '@components/navigation/footer/footer';
-import ProjectCard from '@components/project/project-card';
 import { SocialLinks } from '@components/socials/social-links';
 import {
+    Body,
     Box,
     Button,
     CenterSection,
@@ -13,27 +13,33 @@ import {
     Heading,
     Label,
     PageWrapper,
-    TextButton,
     useTheme,
 } from '@illuzionz-studios/design-system';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
-import { FaArrowRight } from 'react-icons/fa';
 import styles from './index.module.scss';
 import { FeaturedProjects } from '@components/sections/featured-projects';
 import { About } from '@components/sections/about';
+import styled from 'styled-components';
 
 const AnimatedEffect = dynamic(
     () => import('@components/effect/animated-effect'),
     { ssr: false }
 );
 
-const Home: NextPage = () => {
-    const { theme } = useTheme();
+const HeroLink = styled(Body)`
+    text-decoration: underline;
+    transition: 0.1s ease-in-out;
 
+    &:hover {
+        color: var(--primary600);
+    }
+`;
+
+const Home: NextPage = () => {
     return (
         <>
             <Head>
@@ -82,12 +88,20 @@ const Home: NextPage = () => {
                                         alignItems="center"
                                         className={styles.subHero__links}
                                     >
-                                        <Link href="#about">
-                                            <Button variant="primary">
-                                                About Me
-                                            </Button>
-                                        </Link>
                                         <SocialLinks />
+
+                                        <Flex direction="row" gap={4}>
+                                            <Link href="#about">
+                                                <HeroLink variant="md">
+                                                    About Me
+                                                </HeroLink>
+                                            </Link>
+                                            <Link href="/projects">
+                                                <HeroLink variant="md">
+                                                    Projects
+                                                </HeroLink>
+                                            </Link>
+                                        </Flex>
                                     </Flex>
 
                                     <motion.h2 className={styles.hero__splash}>
@@ -102,8 +116,10 @@ const Home: NextPage = () => {
                     </CenterSection>
                     <AnimatedEffect />
                 </FullSection>
-                <FeaturedProjects />
-                <About />
+                <Flex direction="column" background="white">
+                    <About />
+                    <FeaturedProjects />
+                </Flex>
             </PageWrapper>
             <Footer />
         </>
