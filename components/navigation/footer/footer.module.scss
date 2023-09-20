@@ -1,6 +1,5 @@
 .footer {
     width: 100%;
-    background: var(--primary100);
 
     &__author {
         @include text-gradient;
@@ -11,16 +10,10 @@
             var(--secondary700)
         );
     }
+}
 
-    // Bottom gradient
-    &__decoration {
-        width: 100%;
-
-        background: linear-gradient(
-            to right,
-            var(--primary500),
-            var(--secondary500)
-        );
-        height: 4px;
+.links {
+    @include md {
+        flex-direction: column !important;
     }
 }

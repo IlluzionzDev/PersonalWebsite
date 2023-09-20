@@ -1,7 +1,18 @@
 /* eslint-disable @next/next/link-passhref */
-import { BoxProps, Flex, useTheme } from '@illuzionz-studios/design-system';
+import {
+    BoxProps,
+    Flex,
+    Label,
+    useTheme,
+} from '@illuzionz-studios/design-system';
 import Link from 'next/link';
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import {
+    FaEnvelope,
+    FaGithub,
+    FaInstagram,
+    FaLinkedin,
+    FaMailBulk,
+} from 'react-icons/fa';
 import styled from 'styled-components';
 
 const SocialWrapper = styled(Flex).attrs({
@@ -20,6 +31,16 @@ const SocialWrapper = styled(Flex).attrs({
 export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
     return (
         <Flex gap={4} alignItems="center">
+            <Link
+                href="mailto:jaminstratford@gmail.com"
+                target="_blank"
+                aria-label="Email"
+            >
+                <SocialWrapper {...rest}>
+                    <FaEnvelope />
+                </SocialWrapper>
+            </Link>
+
             <Link
                 href="https://github.com/IlluzionzDev"
                 target="_blank"
