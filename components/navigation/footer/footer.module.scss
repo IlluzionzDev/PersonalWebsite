@@ -17,3 +17,11 @@
         flex-direction: column !important;
     }
 }
+
+.socials {
+    @include md {
+        padding-top: 1rem;
+        justify-content: flex-end !important;
+        flex-direction: row-reverse !important;
+    }
+}

@@ -61,7 +61,7 @@ export const Footer = () => {
                             </Link>
                         </Flex>
 
-                        <Flex gap={4}>
+                        <Flex gap={4} className={styles.socials}>
                             <Label variant="md">jaminstratford@gmail.com</Label>
                             <SocialLinks />
                         </Flex>
