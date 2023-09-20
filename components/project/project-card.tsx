@@ -1,7 +1,6 @@
 import {
     Body,
     Box,
-    cssColorShade,
     Flex,
     Heading,
     Label,
@@ -37,12 +36,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
             direction="column"
             radius="lg"
             className={styles.projectCard}
-            initial={{
-                y: 0,
-            }}
-            whileHover={{
-                y: -5,
-            }}
         >
             <Flex direction="row" justifyContent="space-between">
                 <Box>
@@ -55,12 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
                         aria-label="Github Source Code"
                         passHref
                     >
-                        <Box
-                            className={styles.github}
-                            whileHover={{
-                                color: cssColorShade('tertiary', 500),
-                            }}
-                        >
+                        <Box className={styles.github}>
                             <FaGithub size={24} />
                         </Box>
                     </Link>

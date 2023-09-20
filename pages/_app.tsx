@@ -1,6 +1,6 @@
 // Import SCSS utils
 import '@illuzionz-studios/design-system/styles';
-import '@illuzionz-studios/design-system/main-styles';
+import '@styles/site.scss';
 import type { AppProps } from 'next/app';
 
 // Font stlying

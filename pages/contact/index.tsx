@@ -42,7 +42,7 @@ const Projects: NextPage = () => {
 
             <PageWrapper>
                 <div className={styles.pageBg}></div>
-                <MainNav colorScheme="tertiary" />
+                <MainNav colorScheme="secondary" />
                 <CenterSection>
                     <Container>
                         <SectionHeader
@@ -109,7 +109,6 @@ const Projects: NextPage = () => {
                             <Button
                                 type="submit"
                                 variant="primary"
-                                colorScheme="tertiary"
                                 fullWidth
                                 className={styles.contactForm__submit}
                             >

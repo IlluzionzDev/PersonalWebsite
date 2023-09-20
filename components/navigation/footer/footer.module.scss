@@ -1,27 +1,27 @@
 .footer {
     width: 100%;
-    background: var(--primary100);
 
     &__author {
         @include text-gradient;
 
         background-image: linear-gradient(
             to right,
-            var(--tertiary500),
+            var(--primary500),
             var(--secondary700)
         );
     }
+}
 
-    // Bottom gradient
-    &__decoration {
-        width: 100%;
+.links {
+    @include md {
+        flex-direction: column !important;
+    }
+}
 
-        background: linear-gradient(
-            to right,
-            var(--primary500),
-            var(--secondary500),
-            var(--tertiary500)
-        );
-        height: 4px;
+.socials {
+    @include md {
+        padding-top: 1rem;
+        justify-content: flex-end !important;
+        flex-direction: row-reverse !important;
     }
 }

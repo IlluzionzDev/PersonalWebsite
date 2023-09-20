@@ -27,12 +27,12 @@ Current projects are contained in a JSON file at `/content/projects.json`. This 
 {
     "projects": [
         {
-            "name": "Project Name",
-            "description": "Project Description",
-            "skills": ["Node.js", "React.js", "WebSockets", "Redux"],
-            "link": "https://linktoproject.com",
-            "source": "https://projectcode.com",
-            "featured": true
+            "name": "Project Name", // Display name of project
+            "description": "Project Description", // Long description of project
+            "skills": ["Node.js", "React.js", "WebSockets", "Redux"], // Array of skills used
+            "link": "https://linktoproject.com", // Link to hosted verion (if any)
+            "source": "https://projectcode.com", // Link to hosted code
+            "featured": true // If is displayed as a featured project
         }
     ]
 }
@@ -44,8 +44,6 @@ Current projects are contained in a JSON file at `/content/projects.json`. This 
     -   Local components for this website
 -   /content
     -   CMS content for the website
--   /design-system
-    -   My custom design system, to be refactored to it's own npm package
 -   /pages
     -   Website pages
 -   /public

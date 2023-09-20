@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/link-passhref */
 import { MainNav } from '@components/navigation';
 import { Footer } from '@components/navigation/footer/footer';
-import ProjectCard from '@components/project/project-card';
 import { SocialLinks } from '@components/socials/social-links';
-import projects from '@content/projects.json';
 import {
+    Body,
     Box,
     Button,
     CenterSection,
@@ -14,55 +13,33 @@ import {
     Heading,
     Label,
     PageWrapper,
-    TextButton,
     useTheme,
 } from '@illuzionz-studios/design-system';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
-import { FaArrowRight } from 'react-icons/fa';
 import styles from './index.module.scss';
+import { FeaturedProjects } from '@components/sections/featured-projects';
+import { About } from '@components/sections/about';
+import styled from 'styled-components';
 
 const AnimatedEffect = dynamic(
     () => import('@components/effect/animated-effect'),
     { ssr: false }
 );
 
+const HeroLink = styled(Body)`
+    text-decoration: underline;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+        color: var(--primary600);
+    }
+`;
+
 const Home: NextPage = () => {
-    const { theme } = useTheme();
-
-    const loadInTop: Variants = {
-        hidden: {
-            opacity: 0,
-            y: -100,
-        },
-        show: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                staggerChildren: 0.1,
-                type: 'ease-in',
-            },
-        },
-    };
-
-    const loadInBottom: Variants = {
-        hidden: {
-            opacity: 0,
-            y: 100,
-        },
-        show: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                staggerChildren: 0.05,
-                type: 'ease-in',
-            },
-        },
-    };
-
     return (
         <>
             <Head>
@@ -111,18 +88,20 @@ const Home: NextPage = () => {
                                         alignItems="center"
                                         className={styles.subHero__links}
                                     >
-                                        <Link href="/about">
-                                            <Button
-                                                variant="primary"
-                                                colorScheme="primary"
-                                                endIcon={
-                                                    <FaArrowRight size={16} />
-                                                }
-                                            >
-                                                About Me
-                                            </Button>
-                                        </Link>
                                         <SocialLinks />
+
+                                        <Flex direction="row" gap={4}>
+                                            <Link href="#about">
+                                                <HeroLink variant="md">
+                                                    About Me
+                                                </HeroLink>
+                                            </Link>
+                                            <Link href="/projects">
+                                                <HeroLink variant="md">
+                                                    Projects
+                                                </HeroLink>
+                                            </Link>
+                                        </Flex>
                                     </Flex>
 
                                     <motion.h2 className={styles.hero__splash}>
@@ -135,59 +114,12 @@ const Home: NextPage = () => {
                             </Flex>
                         </Container>
                     </CenterSection>
-                    {/* <AnimatedEffect /> */}
+                    <AnimatedEffect />
                 </FullSection>
-                <Container>
-                    <Box paddingTop={10} paddingBottom={10}>
-                        <Box className={styles.projectTitle}>
-                            <Heading
-                                element="h2"
-                                variant="heading-1"
-                                color="black"
-                            >
-                                Featured Projects
-                            </Heading>
-                            <Label variant="xl" color="gray800">
-                                Take a look at some of my favourite projects
-                                I&apos;ve created
-                            </Label>
-                        </Box>
-
-                        <Flex direction="column" gap={7}>
-                            <Flex
-                                direction="row"
-                                marginTop={10}
-                                gap={7}
-                                wrap="wrap"
-                            >
-                                {projects.projects
-                                    .filter((project) => project.featured)
-                                    .map((project, index) => {
-                                        return (
-                                            <ProjectCard
-                                                key={index}
-                                                index={index}
-                                                project={project}
-                                            />
-                                        );
-                                    })}
-                            </Flex>
-                            <Flex
-                                justifyContent="space-between"
-                                direction="row"
-                            >
-                                <div></div>
-                                <Link href="/projects">
-                                    <TextButton
-                                        endIcon={<FaArrowRight size={16} />}
-                                    >
-                                        View More
-                                    </TextButton>
-                                </Link>
-                            </Flex>
-                        </Flex>
-                    </Box>
-                </Container>
+                <Flex direction="column" background="white">
+                    <About />
+                    <FeaturedProjects />
+                </Flex>
             </PageWrapper>
             <Footer />
         </>

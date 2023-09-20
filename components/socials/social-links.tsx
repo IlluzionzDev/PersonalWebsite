@@ -1,34 +1,54 @@
 /* eslint-disable @next/next/link-passhref */
-import { BoxProps, Flex, useTheme } from '@illuzionz-studios/design-system';
+import {
+    BoxProps,
+    Flex,
+    Label,
+    useTheme,
+} from '@illuzionz-studios/design-system';
 import Link from 'next/link';
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import {
+    FaEnvelope,
+    FaGithub,
+    FaInstagram,
+    FaLinkedin,
+    FaMailBulk,
+} from 'react-icons/fa';
+import styled from 'styled-components';
+
+const SocialWrapper = styled(Flex).attrs({
+    justifyContent: 'center',
+    alignItems: 'center',
+})`
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        color: var(--primary500);
+
+        transform: translateY(-2px);
+    }
+`;
 
 export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
-    const { theme } = useTheme();
-
-    const colorScheme = 'tertiary';
-
     return (
         <Flex gap={4} alignItems="center">
+            <Link
+                href="mailto:jaminstratford@gmail.com"
+                target="_blank"
+                aria-label="Email"
+            >
+                <SocialWrapper {...rest}>
+                    <FaEnvelope />
+                </SocialWrapper>
+            </Link>
+
             <Link
                 href="https://github.com/IlluzionzDev"
                 target="_blank"
                 aria-label="GitHub"
             >
-                <Flex
-                    initial={{
-                        y: 0,
-                    }}
-                    whileHover={{
-                        color: 'var(--' + colorScheme + '500)',
-                        y: -2,
-                    }}
-                    justifyContent="center"
-                    alignItems="center"
-                    {...rest}
-                >
+                <SocialWrapper {...rest}>
                     <FaGithub />
-                </Flex>
+                </SocialWrapper>
             </Link>
 
             <Link
@@ -36,20 +56,9 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                 target="_blank"
                 aria-label="LinkedIn"
             >
-                <Flex
-                    initial={{
-                        y: 0,
-                    }}
-                    whileHover={{
-                        color: 'var(--' + colorScheme + '500)',
-                        y: -2,
-                    }}
-                    justifyContent="center"
-                    alignItems="center"
-                    {...rest}
-                >
+                <SocialWrapper {...rest}>
                     <FaLinkedin />
-                </Flex>
+                </SocialWrapper>
             </Link>
 
             <Link
@@ -57,20 +66,9 @@ export const SocialLinks: React.FC<BoxProps> = ({ ...rest }) => {
                 target="_blank"
                 aria-label="Instagram"
             >
-                <Flex
-                    initial={{
-                        y: 0,
-                    }}
-                    whileHover={{
-                        color: 'var(--' + colorScheme + '500)',
-                        y: -2,
-                    }}
-                    justifyContent="center"
-                    alignItems="center"
-                    {...rest}
-                >
+                <SocialWrapper {...rest}>
                     <FaInstagram />
-                </Flex>
+                </SocialWrapper>
             </Link>
         </Flex>
     );

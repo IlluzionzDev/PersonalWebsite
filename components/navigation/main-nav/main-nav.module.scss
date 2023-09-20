@@ -3,7 +3,15 @@
 
     background-image: linear-gradient(
         to right,
-        var(--tertiary700),
+        var(--primary700),
         var(--secondary700)
     );
+}
+
+.link {
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        color: var(--primary500);
+    }
 }
