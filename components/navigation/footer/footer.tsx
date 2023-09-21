@@ -50,7 +50,7 @@ export const Footer = () => {
                         className={styles.links}
                     >
                         <Flex direction="row" gap={4} alignItems="center">
-                            <Link href="#about" passHref>
+                            <Link href="/" passHref>
                                 <HeroLink variant="sm">Home</HeroLink>
                             </Link>
                             <Link href="#about" passHref>
