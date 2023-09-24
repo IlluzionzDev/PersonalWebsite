@@ -3,8 +3,15 @@
         {
             "name": "Quizz",
             "description": "Quizz is a real-time quizzing application much like Kahoot. I built this project as a fun way to develop my skills using websockets. It uses a packet system for real-time communication, featuring a scoring system, quiz editor, and an easy way to join quizzes.",
-            "skills": ["Node.js", "React.js", "WebSockets", "Redux"],
-            "link": "https://github.com/IlluzionzDev/Quizz",
+            "skills": [
+                "Express.js",
+                "Next.js",
+                "React.js",
+                "Jest",
+                "WebSockets",
+                "Redux"
+            ],
+            "link": "https://quizz.jaminstratford.com",
             "source": "https://github.com/IlluzionzDev/Quizz",
             "featured": true
         },
