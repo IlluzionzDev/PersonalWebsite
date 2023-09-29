@@ -26,7 +26,7 @@
         {
             "name": "Illuzionz Studios Design System",
             "description": "This is a React based design system that allows you to use skeleton components to easily and consistently build UIs. Built on styled-components, it makes it very easy to customise and use.",
-            "skills": ["React.js", "Vite", "styled-components"],
+            "skills": ["React.js", "Vite", "styled-components", "Jest"],
             "link": "https://github.com/Illuzionz-Studios/design-system",
             "source": "https://github.com/Illuzionz-Studios/design-system",
             "featured": true

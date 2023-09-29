@@ -71,15 +71,15 @@ export const About: React.FC = () => (
                     </Body>
                 </AboutCard>
 
-                <AboutCard title="Current Stack">
+                <AboutCard title="Interests">
                     <Body variant="md">
-                        My favourite stack for backend is a mix of ExpressJS for
-                        light projects and .NET for more serious projects.
-                        Backed by a robust SQL database interacting with a
-                        dynamic React based frontend. Sprinkle in some
-                        technologies like RabbitMQ, Docker and get a CI/CD
-                        pipeline running, and you have a well-engineered
-                        application.
+                        While my main passion is programming and building cool
+                        things! Some of my other interests include photography
+                        and music. Photography for me is another creative outlet
+                        to capture special moments and share them in various
+                        other forms. Music being another creative outlet,
+                        whether its creating small beats or just consuming the
+                        wide variety of music on the internet.
                     </Body>
                 </AboutCard>
 

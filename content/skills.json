@@ -7,18 +7,17 @@
         "Python",
         "C#",
         ".NET",
-        "SQL",
+        "MySQL",
+        "PostgreSQL",
         "MongoDB",
         "Redis",
-        "RabbitMQ",
         "Node.js",
         "React.js",
         "Redux",
         "Next.js",
         "Express.js",
-        "CI/CD",
-        "Linux",
-        "Docker",
-        "AWS"
+        "REST APIs",
+        "DevOps",
+        "Docker"
     ]
 }
