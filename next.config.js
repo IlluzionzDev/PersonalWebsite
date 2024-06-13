@@ -3,6 +3,7 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
+    output: 'standalone',
     sassOptions: {
         includePaths: ['./styles', './components'],
         prependData: `@import "@illuzionz-studios/design-system/style-utils";`,
