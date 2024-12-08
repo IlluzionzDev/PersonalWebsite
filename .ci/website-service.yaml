@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: personal-website-ip
+  namespace: personal-website
+spec:
+  type: ClusterIP
+#  externalIPs:
+#    - 172.26.11.10
+#    - 172.26.14.208
+  ports:
+    - name: "web"
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: personal-website
