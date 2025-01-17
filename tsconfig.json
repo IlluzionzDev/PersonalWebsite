@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "ESNext",
         "lib": ["dom", "dom.iterable", "esnext", "es6"],
         "types": ["node"],
         "allowJs": true,
@@ -16,13 +16,17 @@
         "jsx": "preserve",
         "incremental": true,
         "baseUrl": ".",
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
         "paths": {
-            "@components/*": ["components/*"],
             "@content/*": ["content/*"],
-            "@styles/*": ["styles/*"]
+            "@/*": ["./src/*"]
         },
         "typeRoots": ["node_modules/@types"]
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/sitemap.xml.js"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
     "exclude": ["node_modules"]
 }
