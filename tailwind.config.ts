@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss';
 import tailwindCssAnimate from 'tailwindcss-animate';
 
 const config = {
-    darkMode: ['class'],
+    darkMode: ['selector'],
     content: ['./src/**/*.{ts,tsx}'],
     prefix: '',
     theme: {

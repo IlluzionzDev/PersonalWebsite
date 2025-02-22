@@ -40,8 +40,49 @@
         @apply bg-background text-foreground;
         width: 100%;
         overflow-x: hidden;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
     }
     html {
         overflow-x: hidden;
+        font-size: calc(0.625rem + 0.41666666666666663vw);
+    }
+
+    /*
+    * Font styling defaults
+     */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', serif;
+    }
+
+    @media screen and (max-width: 1920px) {
+        html {
+            font-size: calc(0.625rem + 0.41666666666666674vw);
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        html {
+            font-size: calc(-0.12500000000000022rem + 1.2500000000000002vw);
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        html {
+            font-size: calc(0.44444444444444453rem + 0.6944444444444443vw);
+        }
+    }
+    @media screen and (max-width: 992px) {
+        html {
+            font-size: calc(0.4655172413793104rem + 0.8620689655172413vw);
+        }
+    }
+    @media screen and (max-width: 760px) {
+        html {
+            font-size: calc(0.6607142857142857rem + 0.7142857142857143vw);
+        }
+    }
+    @media screen and (max-width: 480px) {
+        html {
+            font-size: calc(0.7494780793319415rem + 0.8350730688935282vw);
+        }
     }
 }

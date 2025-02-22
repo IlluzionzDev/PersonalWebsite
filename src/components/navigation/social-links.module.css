@@ -1,0 +1,9 @@
+.social__link {
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        @apply text-indigo-500;
+
+        transform: translateY(-2px);
+    }
+}

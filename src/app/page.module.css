@@ -1,0 +1,29 @@
+@keyframes move-bg {
+    from {
+        background-position: var(--bg-size) 0;
+    }
+    to {
+        background-position: var(--bg-size) 400;
+    }
+}
+
+.hero_animation {
+    --bg-size: 400%;
+    --color1: #2eaef6;
+    --color2: #7a88d3;
+    --color3: #d47aff;
+
+    background: linear-gradient(
+            to right,
+            var(--color1),
+            var(--color2),
+            var(--color3),
+            var(--color1)
+    )
+    0 0 / var(--bg-size) 100%;
+
+    animation: move-bg 8s infinite linear;
+
+    background-clip: text;
+    color: transparent;
+}
